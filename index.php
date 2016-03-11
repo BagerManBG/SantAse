@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 	<script type="text/javascript" src="JS/main.js"></script>
 
-	<link rel="shortcut icon" type="image/png" href="images/favicon/1.png" if="fav">
+	<link rel="shortcut icon" type="image/png" href="images/favicon/favicon.ico">
 
 	<link rel="stylesheet" type="text/css" href="CSS/reset.css">
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
@@ -19,35 +19,39 @@
 			<a href="#" class="activePage">Home</a>
 			<a href="#">Rules</a>
 			<a href="#">Contact</a>
+
+			<button class="sign_UpIn" id="register">Sign Up</button>
+			<button class="sign_UpIn" id="logIn">Sign In</button>
 		</div>
 	</nav>
-	<section>
-		<div class="register">
-			<h2>Register here!</h2>
-			<form method="POST" action="">
-				<label>
-					<p>Username:</p>
-					<input type="text" name="username">
-				</label>
 
-				<label>
-					<p>Email:</p>
-					<input type="text" name="email">
-				</label>
+	<div class="cover"></div>
 
-				<label>
-					<p>Password:</p>
-					<input type="password" name="password">
-				</label>
+	<div class="register">
+		<h2>Register here!</h2>
+		<form method="POST" action="">
+			<label>
+				<!--<p>Username:</p>-->
+				<input type="text" name="username" placeholder="username">
+			</label>
 
-				<label>
-					<p>Confirm:</p>
-					<input type="password" name="password_confirm">
-				</label>
+			<label>
+				<!--<p>Email:</p>-->
+				<input type="text" name="email" placeholder="Email">
+			</label>
 
-				<input type="submit" value="Sing Up">
-			</form>
-		<div>
-	</section>
+			<label>
+				<!--<p>Password:</p>-->
+				<input type="password" name="password" placeholder="Password">
+			</label>
+
+			<label>
+				<!--<p>Confirm:</p>-->
+				<input type="password" name="password_confirm" placeholder="Confirm Password">
+			</label>
+
+			<input type="submit" value="Sing Up">
+		</form>
+	<div>
 </body>
 </html>

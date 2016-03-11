@@ -14,7 +14,9 @@ nav
 	left: 0px;
 	float: left;
 	width: 100%;
-	background-color: rgba(226,206,173,0.69);
+	/*background-color: rgba(226,206,173,0.69);*/
+	background: linear-gradient(rgba(246,206,173,0.7), rgba(226,206,173,0.4));
+	/*linear effect*/
 }
 
 nav .middleNav
@@ -30,8 +32,8 @@ nav .middleNav a
 	display: block;
 	float: left;
 	color: #fff;
-	font-size: 2.31vw; /* #REBEL */
-	padding: 2% 0% 2.8% 0px;
+	font-size: 2vw;
+	padding: 2% 0% 2% 0px;
 	margin: 0px 1.5% 0.2% 1.5%;
 	font-family: "Calibri";
 	text-shadow: 1px 1px 1px #000;
@@ -39,12 +41,17 @@ nav .middleNav a
 	transition: 0.2s;
 }
 
+nav .middleNav a.activePage
+{
+	border-bottom: 2px solid #12ab12;
+}
+
 nav .middleNav a:hover
 {
 	color: #12ab12;
 }
 
-nav .middleNav a.activePage
+button.sign_UpIn
 {
-	border-bottom: 3px solid #12ab12;
+	float: right;
 }

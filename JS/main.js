@@ -1,17 +1,28 @@
 $(document).ready(function(){
 
-	var i = 2;
+	$('.register').hide();
+	$('.logIn').hide();
+	$('.cover').hide();
 
-	setInterval(function(){
+	$('#register').click(function(){
 
-		$("head link:first-of-type").attr("href", "images/favicon/"+i+".png");
+		$('.cover').fadeIn(200);
+		$('.register').fadeIn(400);
+	});
 
-		i++;
+	$('#logIn').click(function(){
 
-		if(i == 5)
-		{
-			i = 1;
-		}
+		$('.cover').fadeIn(200);
+		$('.logIn').fadeIn(400);
+	});
 
-	}, 3000);
+	$('.cover').click(function(){
+
+		$('.cover').fadeOut(200);
+		$('.register').fadeOut(400);
+		$('.logIn').fadeOut(400);
+	});
+
+	//$('.register').fadeOut(400);
+	//$('.register').fadeIn(400);
 });
