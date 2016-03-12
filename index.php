@@ -50,7 +50,7 @@
 				<input type="password" name="password_confirm" placeholder="Confirm Password">
 			</label>
 
-			<input type="submit" value="Sing Up">
+			<input type="submit" value="Sign Up">
 		</form>
 	<div>
 </body>
