@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	$('.register').hide();
-	$('.logIn').hide();
+	$('.login').hide();
 	$('.cover').hide();
 
 	$('#register').click(function(){
@@ -13,14 +13,14 @@ $(document).ready(function(){
 	$('#logIn').click(function(){
 
 		$('.cover').fadeIn(200);
-		$('.logIn').fadeIn(400);
+		$('.login').fadeIn(400);
 	});
 
 	$('.cover').click(function(){
 
 		$('.cover').fadeOut(200);
 		$('.register').fadeOut(400);
-		$('.logIn').fadeOut(400);
+		$('.login').fadeOut(400);
 	});
 
 	//$('.register').fadeOut(400);

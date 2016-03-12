@@ -27,7 +27,7 @@
 
 	<div class="cover"></div>
 
-	<div class="register">
+	<div class="form register">
 		<h2>Registration</h2>
 		<form method="POST" action="">
 			<label>
@@ -51,6 +51,23 @@
 			</label>
 
 			<input type="submit" value="Sign Up">
+		</form>
+	</div>
+
+	<div class="form login">
+		<h2>Login</h2>
+		<form method="POST" action="">
+			<label>
+				<!--<p>Username:</p>-->
+				<input type="text" name="username" placeholder="Username">
+			</label>
+
+			<label>
+				<!--<p>Password:</p>-->
+				<input type="password" name="password" placeholder="Password">
+			</label>
+
+			<input type="submit" value="Log In">
 		</form>
 	<div>
 </body>
