@@ -21,18 +21,18 @@
 			<a href="#">Contact</a>
 
 			<button class="sign_UpIn" id="register">Sign Up</button>
-			<button class="sign_UpIn" id="logIn">Sign In</button>
+			<button class="sign_UpIn" id="logIn">Log In</button>
 		</div>
 	</nav>
 
 	<div class="cover"></div>
 
 	<div class="register">
-		<h2>Register here!</h2>
+		<h2>Registration</h2>
 		<form method="POST" action="">
 			<label>
 				<!--<p>Username:</p>-->
-				<input type="text" name="username" placeholder="username">
+				<input type="text" name="username" placeholder="Username">
 			</label>
 
 			<label>
