@@ -96,3 +96,20 @@ div.cover
 	height: 100%;
 	z-index: 50;
 }
+.sign_UpIn
+{   
+  display: inline-block;
+  padding: 12px 22px;
+  font-size: 22px;
+  font-family: "Calibri";
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px #999;
+}
