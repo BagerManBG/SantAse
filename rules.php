@@ -10,9 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="CSS/reset.css">
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
-	<link rel="stylesheet" type="text/css" href="CSS/home.css">
+	<link rel="stylesheet" type="text/css" href="CSS/rules.css">
 </head>
 <body>
-<?php require_once("includes/navFrom.php"); ?>
+	<?php require_once("includes/navFrom.php"); ?>
 </body>
 </html>
