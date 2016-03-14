@@ -13,6 +13,6 @@
 	<link rel="stylesheet" type="text/css" href="CSS/home.css">
 </head>
 <body>
-<?php require_once("includes/navFrom.php"); ?>
+<?php require_once("./includes/navForm.php"); ?>
 </body>
 </html>

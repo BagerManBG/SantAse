@@ -1,8 +1,8 @@
 <nav>
 		<div class="middleNav">
-			<a href="index.php" target="_blank">Home</a>
-			<a href="#" class="activePage">Rules</a>
-			<a href="#" target="_blank">Contact</a>
+			<a href="index.php" >Home</a>
+			<a href="rules.php" class="activePage">Rules</a>
+			<a href="#" >Contact</a>
 
 			<button class="sign_UpIn" id="register">Sign Up</button>
 			<button class="sign_UpIn" id="logIn">Log In</button>
