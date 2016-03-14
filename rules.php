@@ -13,6 +13,17 @@
 	<link rel="stylesheet" type="text/css" href="CSS/rules.css">
 </head>
 <body>
-	<?php require_once("includes/navFrom.php"); ?>
+	<nav>
+		<div class="middleNav">
+			<a href="index.php" >Home</a>
+			<a href="#" class="activePage">Rules</a>
+			<a href="#" >Contact</a>
+
+			<button class="sign_UpIn" id="register">Sign Up</button>
+			<button class="sign_UpIn" id="logIn">Log In</button>
+		</div>
+	</nav>
+
+	<?php require_once("includes/form.php"); ?>
 </body>
 </html>
