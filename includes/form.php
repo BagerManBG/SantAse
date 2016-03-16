@@ -2,7 +2,7 @@
 
 <div class="form register">
 	<h2>Registration</h2>
-	<form method="POST" action="">
+	<form method="POST" action="PHP/account/register.php">
 		<label>
 			<!--<p>Username:</p>-->
 			<input type="text" name="username" placeholder="Username">

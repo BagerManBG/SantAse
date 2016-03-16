@@ -2,12 +2,15 @@
 {
 	float: left;
 	width: 70%;
-	margin: 0px 15%;
+	margin: 6% 15%;
+	padding: 3% 2%;
+	border-radius: 5%;
+	background-color: rgba(256,256,256,0.7);
+	box-sizing: border-box;
 }
 
 .middleContent h1
 {
-	margin-top: 8%;
 	color: #000;
 	text-shadow: 1px 1px 1px #fff;
 	font-weight: bold;
