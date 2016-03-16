@@ -23,7 +23,7 @@
 			<input type="password" name="password_confirm" placeholder="Confirm Password">
 		</label>
 
-		<input type="submit" value="Sign Up">
+		<input type="submit" value="Sign Up" class="reg">
 	</form>
 </div>
 
@@ -40,6 +40,6 @@
 			<input type="password" name="password" placeholder="Password">
 		</label>
 
-		<input type="submit" value="Log In">
+		<input type="submit" value="Log In" class="log">
 	</form>
 </div>
