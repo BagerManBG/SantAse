@@ -14,5 +14,15 @@
 		exit;
 	}
 
-		
+	if(strlen($password) > 20)
+	{
+		echo "Password is too long !!!";
+		exit;
+	}
+
+	if(!preg_match('/^(?=.{4})(?!.{21})[\w.-]*[a-z0-9][\w-.]*$/i', $password))
+	{
+		echo "Password cannot contain special chars !!!";
+		exit;
+	}	
 ?>

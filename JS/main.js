@@ -22,10 +22,15 @@ $(document).ready(function(){
 		$('.register').fadeOut(400);
 		$('.login').fadeOut(400);
 	});
+	/*
+	var nameError = true;	
+	var mailError = true;
+	var passError = true;
+	var confError = true;
 
-	$('.register input[name=username]').blur(function(){
+	setInterval(function(){
 
-		var name = $('input[name=username]').val();
+		var name = $('.register input[name=username]').val();
 
 		$.ajax({
 			url: "../PHP/account/checkUser.php",
@@ -35,14 +40,19 @@ $(document).ready(function(){
 				if(result != '')
 				{
 					alert(result);
+					nameError = true;
 				}	
+				else
+				{
+					nameError = false;
+				}
 			}
 		});
-	});
+	}, 100);
 
-	$('.register input[name=email]').blur(function(){
+	setInterval(function(){
 
-		var email = $('input[name=email]').val();
+		var email = $('.register input[name=email]').val();
 
 		$.ajax({
 			url: "../PHP/account/checkEmail.php",
@@ -52,14 +62,19 @@ $(document).ready(function(){
 				if(result != '')
 				{
 					alert(result);
+					mailError = true;
+				}
+				else
+				{
+					mailError = false;
 				}	
 			}
 		});
-	});
+	}, 100);
 
-	$('.register input[name=password]').blur(function(){
+	setInterval(function(){
 
-		var pass = $('input[name=password]').val();
+		var pass = $('.register input[name=password]').val();
 
 		$.ajax({
 			url: "../PHP/account/checkPassword.php",
@@ -69,8 +84,51 @@ $(document).ready(function(){
 				if(result != '')
 				{
 					alert(result);
+					passError = true;
 				}	
+				else
+				{
+					passError = false;
+				}
 			}
 		});
-	});
+	}, 100);
+
+	setInterval(function(){
+
+		var confirm = $('.register input[name=password_confirm]').val();
+		var pass = $('.register input[name=password]').val();
+
+		$.ajax({
+			url: "../PHP/account/checkPasswordMatch.php",
+			type: "POST",
+			data: {confirm: confirm,
+						pass: pass},
+			success: function(result) {
+				if(result != '')
+				{
+					alert(result);
+					confError = true;
+				}	
+				else
+				{
+					confError = false;
+				}
+			}
+		});
+	}, 100);
+
+	setInterval(function(){
+
+		if (nameError || mailError || passError || confError)
+		{
+			$('.register input[type=submit]').addClass('disabled');
+			$('.register input[type=submit]').attr('disabled', 'disabled');
+		}
+		else
+		{
+			$('.register input[type=submit]').removeClass('disabled');
+			$('.register input[type=submit]').removeAttr('disabled');
+		}
+	}, 100);*/
 });
