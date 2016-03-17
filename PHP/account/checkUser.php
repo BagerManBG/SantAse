@@ -14,7 +14,13 @@
 		exit;
 	}
 
-	if(!preg_match('/^(?=.{4})(?!.{21})[\w.-]*[a-z][\w-.]*$/i', $username))
+	if(strlen($username) > 20)
+	{
+		echo "Username is too long !!!";
+		exit;
+	}
+
+	if(!preg_match('/^(?=.{4})(?!.{21})[\w]*[a-z][\w]*$/i', $username))
 	{
 		echo "Username cannot contain special chars or only numbers !!!";
 		exit;

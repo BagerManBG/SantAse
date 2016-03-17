@@ -15,20 +15,20 @@
 <body>
 	<nav>
 		<div class="middleNav">
-			<a href="#" class="activePage">Home</a>
-			<a href="rules.php">Rules</a>
-			<a href="#" >Contact</a>
-			<a href="#" >Game</a>
+			<a href="#" class="activePage disable-select">Home</a>
+			<a href="rules.php" class="disable-select">Rules</a>
+			<a href="#" class="disable-select">Contact</a>
+			<a href="#" class="disable-select">Game</a>
 
 			<button class="sign_UpIn" id="register">Sign Up</button>
 			<button class="sign_UpIn" id="logIn">Log In</button>
 		</div>
 	</nav>
 	<div class="playGame"> 
-		<h1>SantAse</h1>
-        <h2>Best way to kill time </h2>
-        <button id="play">Play Game</button>
-        <address>&copy; Copyright 2016 All Rights Reserved</address>
+		<h1 class="disable-select">SantAse</h1>
+        <h2 class="disable-select">Best way to kill time </h2>
+        <button id="play" class="disable-select">Play Game</button>
+        <address class="disable-select">&copy; Copyright 2016 All Rights Reserved</address>
 	</div>
 
 	<?php require_once("./includes/form.php"); ?>

@@ -1,7 +1,7 @@
 <div class="cover"></div>
 
 <div class="form register">
-	<h2>Registration</h2>
+	<h2 class="disable-select">Registration</h2>
 	<form method="POST" action="PHP/account/register.php">
 		<label>
 			<!--<p>Username:</p>-->
@@ -32,7 +32,7 @@
 </div>
 
 <div class="form login">
-	<h2>Login</h2>
+	<h2 class="disable-select">Login</h2>
 	<form method="POST" action="">
 		<label>
 			<!--<p>Username:</p>-->
