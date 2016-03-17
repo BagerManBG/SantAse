@@ -23,7 +23,8 @@ $(document).ready(function(){
 		$('.login').fadeOut(400);
 	});
 	
-	var nameError = true;	
+	var nameError = true;
+	$('.register input[name=username]').addClass('error');	
 	var mailError = true;
 	var passError = true;
 	var confError = true;
@@ -41,10 +42,12 @@ $(document).ready(function(){
 				{
 					//alert(result);
 					nameError = true;
+					$('.register input[name=username]').addClass('error');
 				}	
 				else
 				{
 					nameError = false;
+					$('.register input[name=username]').removeClass('error');
 				}
 			}
 		});

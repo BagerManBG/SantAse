@@ -198,3 +198,13 @@ div.cover
 	background-color: #5CBF50;
     cursor: not-allowed;
 }
+
+.form input.error
+{
+	border: 1px solid #f00;
+}
+
+.form input.error:focus
+{
+	border: 1px solid #f00;
+}
