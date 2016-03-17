@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	
 	$('.register').hide();
 	$('.login').hide();
 	$('.cover').hide();
@@ -22,7 +22,7 @@ $(document).ready(function(){
 		$('.register').fadeOut(400);
 		$('.login').fadeOut(400);
 	});
-	/*
+	
 	var nameError = true;	
 	var mailError = true;
 	var passError = true;
@@ -39,7 +39,7 @@ $(document).ready(function(){
 			success: function(result) {
 				if(result != '')
 				{
-					alert(result);
+					//alert(result);
 					nameError = true;
 				}	
 				else
@@ -61,7 +61,7 @@ $(document).ready(function(){
 			success: function(result) {
 				if(result != '')
 				{
-					alert(result);
+					//alert(result);
 					mailError = true;
 				}
 				else
@@ -83,7 +83,7 @@ $(document).ready(function(){
 			success: function(result) {
 				if(result != '')
 				{
-					alert(result);
+					//alert(result);
 					passError = true;
 				}	
 				else
@@ -107,7 +107,7 @@ $(document).ready(function(){
 			success: function(result) {
 				if(result != '')
 				{
-					alert(result);
+					//alert(result);
 					confError = true;
 				}	
 				else
@@ -130,5 +130,5 @@ $(document).ready(function(){
 			$('.register input[type=submit]').removeClass('disabled');
 			$('.register input[type=submit]').removeAttr('disabled');
 		}
-	}, 100);*/
+	}, 100);
 });
