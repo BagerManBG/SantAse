@@ -18,11 +18,18 @@
 			<a href="#" class="activePage">Home</a>
 			<a href="rules.php">Rules</a>
 			<a href="#" >Contact</a>
+			<a href="#" >Game</a>
 
 			<button class="sign_UpIn" id="register">Sign Up</button>
 			<button class="sign_UpIn" id="logIn">Log In</button>
 		</div>
 	</nav>
+	<div class="playGame"> 
+		<h1> SantAse<h1/>
+        <h3> Best way to kill some time </h3>
+        <button> Play Game </button>
+
+	</div>
 
 	<?php require_once("./includes/form.php"); ?>
 </body>

@@ -19,6 +19,7 @@
 			<a href="index.php" >Home</a>
 			<a href="#" class="activePage">Rules</a>
 			<a href="#" >Contact</a>
+			<a href="#" >Game</a>
 
 			<button class="sign_UpIn" id="register">Sign Up</button>
 			<button class="sign_UpIn" id="logIn">Log In</button>
