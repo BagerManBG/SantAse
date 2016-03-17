@@ -26,7 +26,7 @@
 	</nav>
 	<div class="playGame"> 
 		<h1> SantAse<h1/>
-        <h3> Best way to kill some time </h3>
+        <h2> Best way to kill time </h2>
         <button> Play Game </button>
 
 	</div>

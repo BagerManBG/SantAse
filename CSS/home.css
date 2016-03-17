@@ -1,0 +1,51 @@
+.playGame
+{
+	float: left;
+	width: 54%;
+	margin: 6% 20% 3%;
+	padding: 9% 3%;
+	border-radius: 4%;
+	background-image: url("../images/11.jpg");
+	background-color: rgba(256,256,256,0.7);
+	box-sizing: border-box;
+}
+.playGame h1
+{
+	color: #ffc;
+	text-shadow: 1px 1px 1px #fff;
+	font-weight: bold;
+	font-size: 3.9vw;
+	font-family: "Calibri";
+    text-align: right;
+    padding-right: 11%;
+    margin: -5% -3% 10% 0%;
+  }
+.playGame h2
+{
+	margin-top: 2%;
+	color: #ffc;
+	text-shadow: 1px 1px 1px #fff;
+	font-size: 1.6vw;
+	font-family: "Calibri";
+	text-align: right;
+	padding: 2%  9% 1% 4% ;
+}
+.playGame button
+{
+	display: inline-block;
+	padding: 0.30% 0.5%;
+	font-size: 2.9vw;
+	font-family: "Calibri";
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;	
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 10%;
+	box-shadow: 0 3px #999;
+	margin: 3% 4% 0% 64%;
+	transition: 0.3s;
+}
