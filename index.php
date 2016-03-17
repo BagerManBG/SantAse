@@ -25,10 +25,10 @@
 		</div>
 	</nav>
 	<div class="playGame"> 
-		<h1> SantAse<h1/>
-        <h2> Best way to kill time </h2>
-        <button> Play Game </button>
-
+		<h1>SantAse</h1>
+        <h2>Best way to kill time </h2>
+        <button id="play">Play Game</button>
+        <address>&copy; Copyright 2016 All Rights Reserved</address>
 	</div>
 
 	<?php require_once("./includes/form.php"); ?>

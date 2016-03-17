@@ -207,4 +207,5 @@ div.cover
 .form input.error:focus
 {
 	border: 1px solid #f00;
+	background-color: rgba(128,0,0,0.35);
 }

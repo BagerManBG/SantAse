@@ -16,6 +16,12 @@ $(document).ready(function(){
 		$('.login').fadeIn(400);
 	});
 
+	$('#play').click(function(){
+
+		$('.cover').fadeIn(200);
+		$('.login').fadeIn(400);
+	});
+
 	$('.cover').click(function(){
 
 		$('.cover').fadeOut(200);
@@ -23,11 +29,15 @@ $(document).ready(function(){
 		$('.login').fadeOut(400);
 	});
 	
-	var nameError = true;
-	$('.register input[name=username]').addClass('error');	
+	var nameError = true;	
 	var mailError = true;
 	var passError = true;
 	var confError = true;
+
+	$('.register input[name=username]').addClass('error');
+	$('.register input[name=email]').addClass('error');
+	$('.register input[name=password]').addClass('error');
+	$('.register input[name=password_confirm]').addClass('error');
 
 	setInterval(function(){
 
@@ -66,10 +76,12 @@ $(document).ready(function(){
 				{
 					//alert(result);
 					mailError = true;
+					$('.register input[name=email]').addClass('error');
 				}
 				else
 				{
 					mailError = false;
+					$('.register input[name=email]').removeClass('error');
 				}	
 			}
 		});
@@ -88,10 +100,12 @@ $(document).ready(function(){
 				{
 					//alert(result);
 					passError = true;
+					$('.register input[name=password]').addClass('error');
 				}	
 				else
 				{
 					passError = false;
+					$('.register input[name=password]').removeClass('error');
 				}
 			}
 		});
@@ -112,10 +126,12 @@ $(document).ready(function(){
 				{
 					//alert(result);
 					confError = true;
+					$('.register input[name=password_confirm]').addClass('error');
 				}	
 				else
 				{
 					confError = false;
+					$('.register input[name=password_confirm]').removeClass('error');s
 				}
 			}
 		});

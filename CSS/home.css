@@ -1,40 +1,45 @@
 .playGame
 {
 	float: left;
-	width: 54%;
-	margin: 6% 20% 3%;
-	padding: 9% 3%;
-	border-radius: 4%;
+	width: 70%;
+	margin: 6% 15% 3%;
+	border-radius: 1%;
 	background-image: url("../images/11.jpg");
-	background-color: rgba(256,256,256,0.7);
-	box-sizing: border-box;
+	background-size: cover;
+	background-repeat: no-repeat;
+	float: left;
 }
+
 .playGame h1
 {
 	color: #ffc;
+	float: right;
+	width: 90%;
 	text-shadow: 1px 1px 1px #fff;
 	font-weight: bold;
-	font-size: 3.9vw;
+	font-size: 5vw;
 	font-family: "Calibri";
     text-align: right;
-    padding-right: 11%;
-    margin: -5% -3% 10% 0%;
-  }
+    margin: 6% 10% 4% 0px;  
+}
+
 .playGame h2
 {
-	margin-top: 2%;
 	color: #ffc;
+	float: right;
+	width: 90%;
 	text-shadow: 1px 1px 1px #fff;
-	font-size: 1.6vw;
+	font-size: 2vw;
 	font-family: "Calibri";
 	text-align: right;
-	padding: 2%  9% 1% 4% ;
+	margin: 0px 10% 4% 0px;
 }
+
 .playGame button
 {
 	display: inline-block;
-	padding: 0.30% 0.5%;
-	font-size: 2.9vw;
+	padding: 0.5% 2%;
+	font-size: 3vw;
 	font-family: "Calibri";
 	font-weight: bold;
 	cursor: pointer;
@@ -46,6 +51,31 @@
 	border: none;
 	border-radius: 10%;
 	box-shadow: 0 3px #999;
-	margin: 3% 4% 0% 64%;
 	transition: 0.3s;
+	float: right;
+	margin: 6% 10% 8% 0px;
+}
+
+.playGame button:hover
+{
+	background-color: #3e8e41;
+}
+
+.playGame button:active 
+{
+	background-color: #3e8e41;
+	box-shadow: 0 1px #666;
+	transform: translateY(5.1%);
+}
+
+.playGame address
+{
+	color: #ffc;
+	float: right;
+	width: 90%;
+	text-shadow: 1px 1px 1px #fff;
+	font-size: 1.4vw;
+	font-family: "Calibri";
+	text-align: right;
+	margin: 0px 10% 4% 0px;
 }
