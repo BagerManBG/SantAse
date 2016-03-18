@@ -1,8 +1,25 @@
 $(document).ready(function(){
-	
-	$('.register').hide();
-	$('.login').hide();
-	$('.cover').hide();
+
+	$.ajax({
+		url: "../includes/form.php",
+		success: function(result) {
+			
+			$('body').append(result);
+
+			$('.register').hide();
+			$('.login').hide();
+			$('.cover').hide();
+
+			$('.cover').click(function(){
+
+				$('.cover').fadeOut(200);
+				$('.register').fadeOut(400);
+				$('.login').fadeOut(400);
+			});
+		}
+	});	
+
+	$('.sign_UpIn').hide();
 
 	$('#register').click(function(){
 
@@ -21,13 +38,6 @@ $(document).ready(function(){
 		$('.cover').fadeIn(200);
 		$('.login').fadeIn(400);
 	});
-
-	$('.cover').click(function(){
-
-		$('.cover').fadeOut(200);
-		$('.register').fadeOut(400);
-		$('.login').fadeOut(400);
-	});
 	
 	var nameError = true;	
 	var mailError = true;
@@ -44,7 +54,7 @@ $(document).ready(function(){
 		var name = $('.register input[name=username]').val();
 
 		$.ajax({
-			url: "../PHP/account/checkUser.php",
+			url: "../Controllers/account/checkUser.php",
 			type: "POST",
 			data: {name: name},
 			success: function(result) {
@@ -68,7 +78,7 @@ $(document).ready(function(){
 		var email = $('.register input[name=email]').val();
 
 		$.ajax({
-			url: "../PHP/account/checkEmail.php",
+			url: "../Controllers/account/checkEmail.php",
 			type: "POST",
 			data: {email: email},
 			success: function(result) {
@@ -92,7 +102,7 @@ $(document).ready(function(){
 		var pass = $('.register input[name=password]').val();
 
 		$.ajax({
-			url: "../PHP/account/checkPassword.php",
+			url: "../Controllers/account/checkPassword.php",
 			type: "POST",
 			data: {pass: pass},
 			success: function(result) {
@@ -117,7 +127,7 @@ $(document).ready(function(){
 		var pass = $('.register input[name=password]').val();
 
 		$.ajax({
-			url: "../PHP/account/checkPasswordMatch.php",
+			url: "../Controllers/account/checkPasswordMatch.php",
 			type: "POST",
 			data: {confirm: confirm,
 						pass: pass},
@@ -150,4 +160,44 @@ $(document).ready(function(){
 			$('.register input[type=submit]').removeAttr('disabled');
 		}
 	}, 100);
+
+	$.ajax({
+		url: "../Controllers/logged/loggedUserContent.php",
+		success: function(result) {
+			if(result != '')
+			{
+				var name = result;
+
+				$('.nav').append('<a href="game.php" class="disable-select">Game</a>');
+
+				$('.sign_UpIn').remove();
+				
+				$('.nav').append('<div class=\'logout\'><img src=\'images/main/logout.png\'></div>');
+				$('.nav').append('<p>Welcome, ' + name + '</p>');
+
+				$('#play').click(function(){
+
+					$('.register').hide();
+					$('.login').hide();
+					$('.cover').hide();
+					window.location.href = "game.php";
+				});
+
+				$('.logout').click(function(){
+
+					$.ajax({
+						url: "../Controllers/logged/logout.php",
+						success: function(result) {
+
+							location.reload();
+						}
+					});
+				});
+			}
+			else
+			{
+				$('.sign_UpIn').show();
+			}
+		}
+	});
 });

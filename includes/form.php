@@ -2,7 +2,7 @@
 
 <div class="form register">
 	<h2 class="disable-select">Registration</h2>
-	<form method="POST" action="PHP/account/register.php">
+	<form method="POST" action="Controllers/account/register.php">
 		<label>
 			<!--<p>Username:</p>-->
 			<input type="text" name="username" placeholder="Username">
@@ -33,7 +33,7 @@
 
 <div class="form login">
 	<h2 class="disable-select">Login</h2>
-	<form method="POST" action="PHP/account/login.php">
+	<form method="POST" action="Controllers/account/login.php">
 		<label>
 			<!--<p>Username:</p>-->
 			<input type="text" name="username" placeholder="Username">

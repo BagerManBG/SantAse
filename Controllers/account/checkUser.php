@@ -1,6 +1,6 @@
 <?php 
 	
-	require_once("../../Classes/database/db.class.php");
+	require_once("../../Models/database/db.class.php");
 
 	$username = $_POST['name'];
 

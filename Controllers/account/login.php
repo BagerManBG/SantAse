@@ -1,11 +1,11 @@
 <?php 
-
-	require_once("../../Classes/database/db.class.php");
+	session_start();
+	require_once("../../Models/database/db.class.php");
 
 	$user = $_POST;
 
-	$user['username'] = "     /\|[])(){}$*& ~ + = -   Tes% t.A'd# m`@  !i^n/";
-	$user['password'] = "     /\|[])(){}$*& ~ + = -   a_d.m% in'# `@  !^/";
+	//$user['username'] = "     /\|[])(){}$*& ~ + = -   Tes% t.A'd# m`@  !i^n/";
+	//$user['password'] = "     /\|[])(){}$*& ~ + = -   a_d.m% in'# `@  !^/";
 
 	$user['username'] = str_replace(' ', '-', $user['username']);
    	$user['username'] = preg_replace('/[^A-Za-z0-9._]/', '', $user['username']);
@@ -24,6 +24,17 @@
 
 	$result = $db->fetchArray($q);
 
-	echo "<pre>";
-	print_r($result);
+	if($result != null)
+	{
+		$_SESSION['user'] = $user['username'];
+	}
+	else
+	{
+		$_SESSION['error'] = true;
+	}
+
+	header("Location: ../../index.php");
+
+	//echo "<pre>";
+	//print_r($_SESSION);
 ?>

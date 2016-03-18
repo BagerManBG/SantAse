@@ -26,6 +26,31 @@ nav .middleNav
 	margin: 0px 15%;
 }
 
+nav p
+{
+	color: #ffe;
+	float: right;
+	text-shadow: 1px 1px 1px #fff;
+	font-size: 1.4vw;
+	font-family: "Calibri";
+	text-align: right;
+	margin: 1.3% 0px;
+}
+
+nav .logout
+{
+	float: right;
+	margin: 0.9%;
+	width: 3%;
+	cursor: pointer;
+}
+
+nav .logout img
+{
+	float: right;
+	width: 100%;
+}
+
 nav .middleNav a
 {
 	text-decoration: none;

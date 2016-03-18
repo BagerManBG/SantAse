@@ -16,10 +16,11 @@
 
 	<nav>
 		<div class="middleNav">
-			<a href="index.php" class="disable-select">Home</a>
-			<a href="#" class="activePage disable-select">Rules</a>
-			<a href="#" class="disable-select">Contact</a>
-			<a href="game.php" class="disable-select">Game</a>
+			<div class="nav">
+				<a href="index.php" class="disable-select">Home</a>
+				<a href="#" class="activePage disable-select">Rules</a>
+				<a href="#" class="disable-select">Contact</a>
+			</div>
 
 			<button class="sign_UpIn" id="register">Sign Up</button>
 			<button class="sign_UpIn" id="logIn">Log In</button>
@@ -98,7 +99,5 @@
 		Games are played to any point value the players agree on. Typically, the first person to reach 11 points wins.
 		</p>
 	</div>
-
-	<?php require_once("includes/form.php"); ?>
 </body>
 </html>

@@ -15,10 +15,11 @@
 <body>
 	<nav>
 		<div class="middleNav">
-			<a href="#" class="activePage disable-select">Home</a>
-			<a href="rules.php" class="disable-select">Rules</a>
-			<a href="#" class="disable-select">Contact</a>
-			<a href="game.php" class="disable-select">Game</a>
+			<div class="nav">
+				<a href="#" class="activePage disable-select">Home</a>
+				<a href="rules.php" class="disable-select">Rules</a>
+				<a href="#" class="disable-select">Contact</a>
+			</div>
 
 			<button class="sign_UpIn" id="register">Sign Up</button>
 			<button class="sign_UpIn" id="logIn">Log In</button>
@@ -31,6 +32,6 @@
         <address class="disable-select">&copy; Copyright 2016 All Rights Reserved</address>
 	</div>
 
-	<?php require_once("./includes/form.php"); ?>
+	
 </body>
 </html>

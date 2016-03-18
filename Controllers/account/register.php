@@ -1,6 +1,6 @@
 <?php 
 
-	require_once("../../Classes/database/db.class.php");
+	require_once("../../Models/database/db.class.php");
 	
 	$info = $_POST;
 	$hasError = false;
@@ -65,7 +65,7 @@
 		$hasError = true;
 	}
 
-	if(!preg_match('/^(?=.{4})(?!.{21})[\w.-]*[a-z0-9][\w-.]*$/i', $info['password']))
+	if(!preg_match('/^[a-z0-9]*$/i', $info['password']))
 	{
 		$hasError = true;
 	}
