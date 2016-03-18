@@ -20,7 +20,15 @@
 		$hasError = true;
 	}
 
-	if(!preg_match('/^(?=.{4})(?!.{21})[\w]*[a-z][\w]*$/i', $info['username']))
+	if(!preg_match('/^(?=.{4})(?!.{21})[\w]*[a-z.][\w]*$/i', $info['username']))
+	{
+		$hasError = true;
+	}
+
+	$q = "SELECT * FROM `users` WHERE `username`= '".$username."'";
+	$result = $db->fetchArray($q);
+
+	if(count($result) > 0)
 	{
 		$hasError = true;
 	}

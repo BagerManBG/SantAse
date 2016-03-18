@@ -33,7 +33,7 @@
 
 <div class="form login">
 	<h2 class="disable-select">Login</h2>
-	<form method="POST" action="">
+	<form method="POST" action="PHP/account/login.php">
 		<label>
 			<!--<p>Username:</p>-->
 			<input type="text" name="username" placeholder="Username">

@@ -1,4 +1,6 @@
 <?php 
+	
+	require_once("../../Classes/database/db.class.php");
 
 	$username = $_POST['name'];
 
@@ -20,9 +22,18 @@
 		exit;
 	}
 
-	if(!preg_match('/^(?=.{4})(?!.{21})[\w]*[a-z][\w]*$/i', $username))
+	if(!preg_match('/^(?=.{4})(?!.{21})[\w]*[a-z.][\w]*$/i', $username))
 	{
 		echo "Username cannot contain special chars or only numbers !!!";
+		exit;
+	}
+
+	$q = "SELECT * FROM `users` WHERE `username`= '".$username."'";
+	$result = $db->fetchArray($q);
+
+	if(count($result) > 0)
+	{
+		echo "Username already taken !!!";
 		exit;
 	}
 ?>

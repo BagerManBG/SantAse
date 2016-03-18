@@ -70,7 +70,7 @@ button.sign_UpIn
 	color: #fff;
 	background-color: #4CAF50;
 	border: none;
-	border-radius: 15%;
+	border-radius: 10px;
 	box-shadow: 0 3px #999;
 	margin-left: 2%;
 	margin-top: 0.872%;
@@ -159,7 +159,7 @@ button.sign_UpIn
 	border: 0px solid rgba(0,0,0,0);
 	background-color: #5CBF50;
 	font-size: 2vw;
-    font-family: "Colibri";
+    font-family: "Calibri";
     font-weight: bold;
     text-shadow: 1px 1px 1px #fff;
     margin-top: 3%;
