@@ -141,6 +141,10 @@ button.sign_UpIn
 
 .form input:focus
 {
+	outline-style:none;
+	box-shadow:none;
+	border-color:transparent;
+	
 	border: 1px solid #12ab12;
 	background-color: rgba(18,200,18,0.35);
 	color: #fff;
@@ -208,4 +212,12 @@ div.cover
 {
 	border: 1px solid #f00;
 	background-color: rgba(128,0,0,0.35);
+}
+
+.disable-select 
+{
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
 }

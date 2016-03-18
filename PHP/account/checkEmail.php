@@ -14,4 +14,10 @@
 		echo "This is not a valid email !!!";
 		exit;
 	}
+
+	if(!preg_match('/^[a-z0-9@._]+$/i', $email))
+	{
+		echo "Email cannot contain special chars !!!";
+		exit;
+	}
 ?>
