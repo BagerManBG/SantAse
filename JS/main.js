@@ -179,7 +179,7 @@ $(document).ready(function(){
 				{
 					$('.nav').append('<a href="game.php" class="disable-select">Game</a>');
 				}
-				
+
 				$('.sign_UpIn').remove();
 				
 				$('.nav').append('<div class=\'logout\'><img src=\'images/main/logout.png\'></div>');
@@ -210,4 +210,12 @@ $(document).ready(function(){
 			}
 		}
 	});
+});
+
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+        $('.cover').fadeOut(200);
+		$('.register').fadeOut(400);
+		$('.login').fadeOut(400);
+    }
 });
