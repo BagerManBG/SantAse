@@ -168,8 +168,18 @@ $(document).ready(function(){
 			{
 				var name = result;
 
-				$('.nav').append('<a href="game.php" class="disable-select">Game</a>');
+				var url = window.location.pathname;
+				var filename = url.substring(url.lastIndexOf('/')+1);
 
+				if(filename == "game.php")
+				{
+					$('.nav').append('<a href="game.php" class="activePage disable-select">Game</a>');
+				}
+				else
+				{
+					$('.nav').append('<a href="game.php" class="disable-select">Game</a>');
+				}
+				
 				$('.sign_UpIn').remove();
 				
 				$('.nav').append('<div class=\'logout\'><img src=\'images/main/logout.png\'></div>');
