@@ -11,7 +11,7 @@
 
 		<link rel="stylesheet" type="text/css" href="CSS/reset.css">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
-		<link rel="stylesheet" type="text/css" href="CSS/home.css">
+		<link rel="stylesheet" type="text/css" href="CSS/game.css">
 	</head>
 	<body>
 		<nav>
@@ -23,5 +23,9 @@
 				</div>
 			</div>
 		</nav>
+
+		<div class="table">
+			
+		</div>
 	</body>
 </html>

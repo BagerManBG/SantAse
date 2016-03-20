@@ -1,0 +1,12 @@
+.table
+{
+	background-image: url("../images/game/table.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 80%;
+	float: left;
+	width: 70%;
+	margin: 10% 15%;
+	height: 600px; /* remove later */
+	border-radius: 20px;
+}
