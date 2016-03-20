@@ -1,32 +1,30 @@
 <?php 
 	session_start();
 	require_once("../../Models/database/db.class.php");
+	require_once("../../Models/account/login.class.php");
 
-	$user = $_POST;
+	$info = $_POST;
 
-	//$user['username'] = "     /\|[])(){}$*& ~ + = -   Tes% t.A'd# m`@  !i^n/";
-	//$user['password'] = "     /\|[])(){}$*& ~ + = -   a_d.m% in'# `@  !^/";
+	if( !( isset($_POST['username']) || isset($_POST['password']) ) )
+	{
+		header("Location: ../../index.php");
+	}
 
-	$user['username'] = str_replace(' ', '-', $user['username']);
-   	$user['username'] = preg_replace('/[^A-Za-z0-9._]/', '', $user['username']);
+	$user = $info['username'];
+	$pass = $info['password'];
 
-   	$user['password'] = str_replace(' ', '-', $user['password']);
-   	$user['password'] = preg_replace('/[^A-Za-z0-9]/', '', $user['password']);
+	$log->setLoginData($user, $pass);
 
-	echo "<pre>";
-	print_r($user);
+	$user = $log->getUsername();
+	$pass = $log->getPassword();
 
-	$user['password'] = md5($user['password']);
-
-	$q = "SELECT * FROM `users` WHERE `username` = '".$user['username']."' AND `password` = '".$user['password']."'";
-
-	echo $q;
+	$q = "SELECT * FROM `users` WHERE `username` = '".$user."' AND `password` = '".$pass."'";
 
 	$result = $db->fetchArray($q);
 
 	if($result != null)
 	{
-		$_SESSION['user'] = $user['username'];
+		$_SESSION['user'] = $user;
 	}
 	else
 	{
@@ -34,7 +32,4 @@
 	}
 
 	header("Location: ../../index.php");
-
-	//echo "<pre>";
-	//print_r($_SESSION);
 ?>

@@ -6,7 +6,7 @@
 		<label>
 			<!--<p>Username:</p>-->
 			<input type="text" name="username" placeholder="Username">
-			
+
 		</label>
 
 		<label>
