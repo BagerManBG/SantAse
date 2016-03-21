@@ -182,7 +182,7 @@ $(document).ready(function(){
 
 				$('.sign_UpIn').remove();
 				
-				$('.nav').append('<div class=\'logout\'><img src=\'images/main/logout.png\'></div>');
+				$('.nav').append('<div class=\'logout\'><img src=\'images/main/logout-1.png\'></div>');
 				$('.nav').append('<p>Welcome, ' + name + '</p>');
 
 				$('#play').click(function(){

@@ -5,8 +5,10 @@
 	background-size: cover;
 	background-position: 50% 80%;
 	float: left;
-	width: 70%;
-	margin: 10% 15%;
-	height: 600px; /* remove later */
+	width: 90%;
+	margin: 4% 5% 3% 5%;
+	height: 550px; /* remove later */
 	border-radius: 20px;
+	box-shadow: 20px;
+	position: fixed;
 }
