@@ -4,6 +4,7 @@
 	require_once("../../Models/account/login.class.php");
 
 	$info = $_POST;
+	$_SESSION['error'] = 'false';
 
 	if( !( isset($_POST['username']) || isset($_POST['password']) ) )
 	{
@@ -28,7 +29,7 @@
 	}
 	else
 	{
-		$_SESSION['error'] = true;
+		$_SESSION['error'] = 'true';
 	}
 
 	header("Location: ../../index.php");

@@ -33,7 +33,7 @@
 				$this->hasError = true;
 			}
 
-			if(!preg_match('/^(?=.{4})(?!.{21})[\w]*[a-z.][\w]*$/i', $this->username))
+			if(!preg_match('/^(?=.{4})(?!.{21})[^\W_]*[a-z][^\W_]*$/i', $this->username))
 			{
 				$this->hasError = true;
 			}

@@ -5,13 +5,13 @@
 	<form method="POST" action="Controllers/account/register.php">
 		<label>
 			<!--<p>Username:</p>-->
-			<input type="text" name="username" placeholder="Username">
+			<input type="text" name="username" placeholder="Username" id="username">
 
 		</label>
 
 		<label>
 			<!--<p>Email:</p>-->
-			<input type="text" name="email" placeholder="Email">
+			<input type="text" name="email" placeholder="Email" id="email">
 			
 		</label>
 

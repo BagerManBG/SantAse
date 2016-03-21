@@ -22,7 +22,7 @@
 		exit;
 	}
 
-	if(!preg_match('/^(?=.{4})(?!.{21})[\w]*[a-z.][\w]*$/i', $username))
+	if(!preg_match('/^(?=.{4})(?!.{21})[^\W_]*[a-z][^\W_]*$/i', $username))
 	{
 		echo "Username cannot contain special chars or only numbers !!!";
 		exit;

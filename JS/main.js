@@ -180,6 +180,8 @@ $(document).ready(function(){
 					$('.nav').append('<a href="game.php" class="disable-select">Game</a>');
 				}
 
+				$('.form, .cover').remove();
+
 				$('.sign_UpIn').remove();
 				
 				$('.nav').append('<div class=\'logout\'><img src=\'images/main/logout-1.png\'></div>');
@@ -207,6 +209,32 @@ $(document).ready(function(){
 			else
 			{
 				$('.sign_UpIn').show();
+			}
+		}
+	});
+
+	$.ajax({
+
+		url: "../Controllers/account/loginError.php",
+		success: function(result) {
+
+			if(result == 'error')
+			{
+				$('.cover').fadeIn(200);
+				$('.login').fadeIn(400);
+
+				$('.login input[name=username]').addClass('error');
+				$('.login input[name=password]').addClass('error');
+
+				$('.login input[name=username]').keyup(function(){
+
+					$('.login input[name=username]').removeClass('error');
+				});
+
+				$('.login input[name=password]').keyup(function(){
+
+					$('.login input[name=password]').removeClass('error');
+				});
 			}
 		}
 	});
