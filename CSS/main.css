@@ -142,13 +142,13 @@ button.sign_UpIn
 
 .form p
 {
-	width: 20%;
+	width: 100%;
 	float: left;
-	color: #fff;
+	color: #aaa;
 	font-family: "Calibri";
-	font-weight: bold;
-	font-size: 1.7vw;
+	font-size: 1.2vw;
 	margin-top: 1%;
+	transition: 0.3s;
 }
 
 .form input
@@ -238,6 +238,17 @@ div.cover
 {
 	border: 1px solid #f00;
 	background-color: rgba(128,0,0,0.35);
+}
+
+.form input.default
+{
+	border: 1px solid #aaa;
+}
+
+.form input.default:focus
+{
+	border: 1px solid #aaa;
+	background-color: rgba(128,128,128,0.35);
 }
 
 .disable-select 
