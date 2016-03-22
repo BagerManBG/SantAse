@@ -42,6 +42,7 @@
 		<label>
 			<!--<p>Password:</p>-->
 			<input type="password" name="password" placeholder="Password">
+			<p class="loginError"></p>
 		</label>
 
 		<input type="submit" value="Log In" class="log">

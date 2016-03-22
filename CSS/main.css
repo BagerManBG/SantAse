@@ -151,6 +151,11 @@ button.sign_UpIn
 	transition: 0.3s;
 }
 
+.form .loginError
+{
+	color: #ef470a;
+}
+
 .form input
 {
 	/*width: 70%;*/
