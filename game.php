@@ -25,24 +25,26 @@
 		</nav>
 
 			<div class="chatAndRoom">
-			<form class="chat">
-				<div> 
-					<label> Chat </label>
-				</div>
-				
-					<div class="border"> 
-					</div>
+				<form class="chat">
+					<div> 
+						<label> Chat </label>
+					</div>	
 
-				<div id="messages">				
-	   			</div>
-	   			
 
-					<input type="text" id="myMessage" >
-			    	<input type="submit" value="Send" id="send"> 
-			</form>
-				
+			 	 <div id="messages">
+			 	 	 <div class="discussion"> </div>
+			        <input type="text" id="myMessage">
+			    	<input type="submit" value="Send" id="send">
+			    	 				
+	   		 	 </div> 	
+
+					 
+				</form>
+
 				<div class="rooms">
 					<div> <label> Rooms </label> </div>
+					 	<div class="border"> </div>
+					 		<button> Start game </button>
 	   	   	    </div>
 	   		</div>
 	</body>
