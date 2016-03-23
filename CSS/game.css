@@ -12,3 +12,108 @@
 	box-shadow: 20px;
 	position: fixed;
 }
+#messages 
+{
+	width:100%;
+	height:80vh;
+	margin-bottom:2px;
+	float: left;
+	border-radius: 1vw;
+}
+
+#myMessage 
+{
+	width:83%;
+	border-radius: 1vw;
+	margin-right: 5px;
+	margin-left: 15px;
+}
+
+#myMessage input
+{
+	padding-bottom: 1%;
+	border-radius: 1vw;
+}
+#send
+{  
+	margin-bottom: 1%;
+	border-radius: 10px;
+	background-color: green;
+
+}
+
+.messageLine
+{
+	float: left;
+	width: 100%;
+
+}
+
+.sender
+{
+	color: #AA0000;
+}
+.chat
+{
+	background-color: green;
+	
+	border-radius: 1vw;
+	background-color: rgba(51, 204, 51,0.9);
+	display: table-cell;
+	width: 40%;
+	
+	
+	box-sizing: border-box;
+	box-shadow:5px 5px #999;
+
+
+}
+.rooms
+{   
+	background-color: yellow;
+	
+	border: 2px;
+	border-color: black;
+	border-radius: 1vw;
+	background-color: rgba(51, 204, 500,0.9);
+	display: table-cell;
+	width: 40%;
+		
+	
+	box-sizing: border-box;
+	box-shadow:5px 5px #999;
+
+
+}
+.chatAndRoom
+{
+	display: table;
+	position: fixed;
+	width: 100%;
+	
+	margin-bottom: 2px;
+	margin-top: 20px;
+	border-collapse:separate;
+	border-spacing:2vw;
+}
+.rooms label 
+{
+	font-size: 50px;
+	font-family: "Calibri";
+	font-weight: bold;
+	margin-left:38%;
+}
+.chat label 
+{
+	font-size: 50px;
+	font-family: "Calibri";
+	font-weight: bold;
+	margin-left: 40%;
+}
+.border
+{
+	border: 10%;
+	border-radius: 10px;
+	border-color: black;
+
+}
