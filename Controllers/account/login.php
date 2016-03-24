@@ -25,7 +25,8 @@
 
 	if($result != null)
 	{
-		$_SESSION['user'] = $user;
+		$_SESSION['user_id'] = $result[0]['id'];
+		$_SESSION['user'] = $result[0]['username'];
 	}
 	else
 	{

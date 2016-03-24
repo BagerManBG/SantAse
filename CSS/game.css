@@ -25,7 +25,7 @@
 {
 	border-radius: 5px;
 	background-color: rgba(51, 204, 51,0.5);
-	width: 45%;
+	width: 49%;
 	float: left;
 }
 
@@ -43,13 +43,13 @@
 	float: left;
 	border-radius: 20px;
 	margin: 0px 1.5% 1.5%;
-	position: relative;
 }
 
 .sender
 {
 	width: 100%;
 	float: left;
+	position: relative;
 }
 
 .messages .sender textarea
@@ -60,21 +60,22 @@
 	border-radius: 5px;
 	resize: none;
 	padding: 1%;
-	font-size: 0.8vw;
+	font-size: 1.2vw;
 }
 
 .messages .sender #send
 {   
 	position: absolute;
-	bottom: 0px;
+	bottom: 1%;
 	right: 0px;
 	float: right;
+	height: 96%;
 	border-radius: 10px;
 	background-color: #090;
 	font-family: "Calibri";
 	font-weight: bold;
 	width: 15%;
-	font-size: 1vw;
+	font-size: 1.4vw;
 	color: #fff;
 	text-shadow: 1px 1px 1px #000;
 	transition: 0.3s;
@@ -89,7 +90,7 @@
 .discussion
 {
 	width:99%;
-	height:30vh;
+	height:50vh;
 	margin-bottom:2px;
 	float: left;
 	border-radius: 0.5vw;
@@ -98,7 +99,34 @@
 	margin-right: 1px;
 	background-color: white;
 	z-index: 1000;
+	overflow: scroll;
 }
+
+.discussion .name
+{
+	text-decoration: underline;
+	color: blue;
+	font-weight: bold;
+	padding: 1%;
+	font-size: 1.4vw;
+	font-family: "Calibri";
+}
+
+.discussion .my
+{
+	color: red;
+}
+
+.discussion .message
+{
+	color: #000;
+	font-weight: bold;
+	padding-left: 2%;
+	font-size: 1.2vw;
+	font-family: "Calibri";
+}
+
+/*need to change things below*/
 
 .messageLine
 {

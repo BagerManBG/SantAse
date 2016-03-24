@@ -10,4 +10,37 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	$('#send').click(function(){
+
+		var message = $('.messages .sender textarea').val()
+		$('.messages .sender textarea').attr("value", ""); 
+
+		$.ajax({
+			url: "../Controllers/chat/sendMessage.php",
+			type: "POST",
+			data: {message: message},
+			success: function(result){
+
+				checkMessages();
+			}
+		});
+	});
+
+	setInterval(function(){
+
+		checkMessages();
+	}, 200);
 });
+
+function checkMessages()
+{
+	$.ajax({
+		url: "../Controllers/chat/getMessages.php",
+		success: function(result){
+			$('.discussion').empty();
+			$('.discussion').append(result);
+			$('.discussion').scrollTop(10000);
+		}
+	});
+}
