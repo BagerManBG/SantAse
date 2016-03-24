@@ -12,42 +12,73 @@
 	box-shadow: 20px;
 	position: fixed;
 }
-#messages 
+
+.chatAndRoom
 {
-	width:99%;
-	height:80vh;
-	margin-bottom:2px;
 	float: left;
-	border-radius: 0.5vw;
-	border: 2px solid black;
-	margin-left: 1px;
-	margin-right: 1px;
-	background-color: black;
+	width: 70%;
+	margin: 0px 15%;
+	margin-top: 5%;
 }
 
-#myMessage 
+.chat
 {
-	width:83%;
-	height: 30%;
-	border-radius: 1vw;
-	margin-right: 5px;
-	margin-left: 15px;
+	border-radius: 5px;
+	background-color: rgba(51, 204, 51,0.5);
+	width: 45%;
+	float: left;
 }
 
-#myMessage input
+.chatAndRoom h2 
 {
-	padding-bottom: 1%;
-	border-radius: 1vw;
-}
-#send
-{   margin-top: 55%;
-	margin-bottom: 1%;
-	border-radius: 10px;
-	background-color: green;
+	font-size: 2.2vw;
 	font-family: "Calibri";
 	font-weight: bold;
-	height: 31%;
-	width: 10%;
+	text-align: center;
+}
+
+.messages 
+{
+	width:97%;
+	float: left;
+	border-radius: 20px;
+	margin: 0px 1.5% 1.5%;
+	position: relative;
+}
+
+.messages textarea
+{
+	width: 80%;
+	float: left;
+	height: 10%;
+	border-radius: 5px;
+	resize: none;
+	padding: 1%;
+	font-size: 0.8vw;
+}
+
+#send
+{   
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	float: right;
+	border-radius: 10px;
+	background-color: #090;
+	font-family: "Calibri";
+	font-weight: bold;
+	width: 15%;
+	height: 100%;
+	font-size: 1.3vw;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	transition: 0.3s;
+}
+
+#send:hover
+{
+	background-color: green;
+	cursor: pointer;
 }
 
 .messageLine
@@ -60,16 +91,7 @@
 {
 	color: #AA0000;
 }
-.chat
-{
-	border-radius: 6px;
-	background-color: rgba(51, 204, 51,0.9);
-	display: table-cell;
-	width: 40%;	
-	box-sizing: border-box;
-	box-shadow:3px 3px #999;
-	margin-bottom: 1px;
-}
+
 .rooms
 {   
 	border-radius: 6px;
@@ -79,16 +101,7 @@
 	box-sizing: border-box;
 	box-shadow:3px 3px #999;
 }
-.chatAndRoom
-{
-	display: table;
-	position: fixed;
-	width: 100%;	
-	margin-bottom: 2px;
-	margin-top: 20px;
-	border-collapse:separate;
-	border-spacing:2vw;
-}
+
 .rooms label 
 {
 	font-size: 50px;
@@ -96,13 +109,7 @@
 	font-weight: bold;
 	margin-left:38%;
 }
-.chat label 
-{
-	font-size: 50px;
-	font-family: "Calibri";
-	font-weight: bold;
-	margin-left: 40%;
-}
+
 .border
 { 
     width:99%;
@@ -112,15 +119,6 @@
 	float: left;
 	border-radius: 0.5vw;
 	border: 2px solid black;
-}
- button
-{
-	margin-bottom: 1%;
-	border-radius: 10px;
-	background-color: green;
-	margin-left: 83%;
-	font-family: "Calibri";
-	font-weight: bold;
 }
 
 discussion

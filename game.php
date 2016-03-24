@@ -24,28 +24,22 @@
 			</div>
 		</nav>
 
-			<div class="chatAndRoom">
-				<form class="chat">
-					<div> 
-						<label> Chat </label>
-					</div>	
+		<div class="chatAndRoom">
+			<div class="chat">
+				<h2>Chat</h2>
 
+			 	<div class="messages">
+				 	<div class="discussion"></div>
+				    <textarea placeholder="Type message here..."></textarea>
+				   	<button id="send">Send</button>
+	   		 	</div>
+			</div>
 
-			 	 <div id="messages">
-			 	 	 <div class="discussion"> </div>
-			        <input type="text" id="myMessage">
-			    	<input type="submit" value="Send" id="send">
-			    	 				
-	   		 	 </div> 	
+			<!--<div class="rooms">
+				<h2>Rooms</h2>
 
-					 
-				</form>
-
-				<div class="rooms">
-					<div> <label> Rooms </label> </div>
-					 	<div class="border"> </div>
-					 		<button> Start game </button>
-	   	   	    </div>
-	   		</div>
+				<button>Start game</button>
+   	   	    </div>-->
+   		</div>
 	</body>
 </html>
