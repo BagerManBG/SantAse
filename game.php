@@ -30,8 +30,10 @@
 
 			 	<div class="messages">
 				 	<div class="discussion"></div>
-				    <textarea placeholder="Type message here..."></textarea>
-				   	<button id="send">Send</button>
+				 	<div class="sender">
+					    <textarea placeholder="Type message here..."></textarea>
+					   	<button id="send">Send</button>
+				   	</div>
 	   		 	</div>
 			</div>
 
