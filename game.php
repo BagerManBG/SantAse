@@ -4,6 +4,7 @@
 		<title>SantAse</title>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+		<script type="text/javascript" src="JS/jquery.js"></script>
 		<script type="text/javascript" src="JS/main.js"></script>
 		<script type="text/javascript" src="JS/game.js"></script>
 
@@ -26,13 +27,13 @@
 
 		<div class="chatAndRoom">
 			<div class="chat">
-				<h2>Chat</h2>
+				<h2 class="disable-select">Chat</h2>
 
-			 	<div class="messages">
-				 	<div class="discussion"></div>
-				 	<div class="sender">
+			 	<div class="messages disable-select">
+				 	<div class="discussion disable-select"></div>
+				 	<div class="sender disable-select">
 					    <textarea placeholder="Type message here..."></textarea>
-					   	<button id="send">Send</button>
+					   	<button id="send" class="disable-select">Send</button>
 				   	</div>
 	   		 	</div>
 			</div>

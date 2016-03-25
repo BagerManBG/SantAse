@@ -15,7 +15,7 @@
 
 	foreach ($result as $key => $val) 
 	{
-		echo "<p class='name";
+		echo "<p class='name disable-select";
 		if($user_id == $val['user_id'])
 		{
 			echo " my";

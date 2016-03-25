@@ -1,3 +1,5 @@
+var flag = true;
+
 $(document).ready(function(){
 
 	$.ajax({
@@ -40,7 +42,11 @@ function checkMessages()
 		success: function(result){
 			$('.discussion').empty();
 			$('.discussion').append(result);
-			$('.discussion').scrollTop(10000);
+			if(flag)
+			{
+				$('.discussion').scrollTop(10000);
+				flag = false;
+			}	
 		}
 	});
 }

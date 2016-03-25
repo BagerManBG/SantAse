@@ -86,8 +86,8 @@ $(document).ready(function(){
 
 						$('.sign_UpIn').remove();
 						
-						$('.nav').append('<div class=\'logout\'><img src=\'images/main/logout-1.png\'></div>');
-						$('.nav').append('<p>Welcome, ' + name + '</p>');
+						$('.nav').append('<div class=\'logout disable-select\'><img src=\'images/main/logout-1.png\'></div>');
+						$('.nav').append('<p class=\'disable-select\'>Welcome, ' + name + '</p>');
 
 						$('#play').click(function(){
 
