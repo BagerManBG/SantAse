@@ -4,7 +4,7 @@
 		<title>SantAse</title>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-		<script type="text/javascript" src="JS/jquery.js"></script>
+		<!--<script type="text/javascript" src="JS/jquery.js"></script>-->
 		<script type="text/javascript" src="JS/main.js"></script>
 		<script type="text/javascript" src="JS/game.js"></script>
 
@@ -38,11 +38,16 @@
 	   		 	</div>
 			</div>
 
-			<!--<div class="rooms">
-				<h2>Rooms</h2>
+			<div class="room">
+				<h2 class="disable-select">Online Players</h2>
 
-				<button>Start game</button>
-   	   	    </div>-->
+			 	<div class="container disable-select">
+				 	<div class="list disable-select"></div>
+				 	<div class="challenger disable-select">
+						<button id="challenge" class="disable-select">Challenge Player</button>
+					</div>
+	   		 	</div>
+			</div>
    		</div>
 	</body>
 </html>

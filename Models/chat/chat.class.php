@@ -9,6 +9,7 @@
 		{
 			$this->sender_id = $send;
 			$this->message = $mess;
+			$this->validateMessage();
 		}
 
 		public function getSender()
@@ -19,6 +20,12 @@
 		public function getMessage()
 		{
 			return $this->message;
+		}
+
+		private function validateMessage()
+		{
+			$this->message = trim($this->message);
+			$this->message = htmlentities($this->message, ENT_QUOTES);
 		}
 	}
 

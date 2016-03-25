@@ -24,9 +24,17 @@
 .chat
 {
 	border-radius: 5px;
-	background-color: rgba(51, 204, 51,0.5);
+	background-color: rgba(51, 204, 51, 0.5);
 	width: 49%;
 	float: left;
+}
+
+.room
+{
+	border-radius: 5px;
+	background-color: rgba(0, 191, 255, 0.5);
+	width: 49%;
+	float: right;
 }
 
 .chatAndRoom h2 
@@ -45,6 +53,14 @@
 	margin: 0px 1.5% 1.5%;
 }
 
+.container 
+{
+	width:97%;
+	float: left;
+	border-radius: 20px;
+	margin: 0px 1.5% 1.5%;
+}
+
 .sender
 {
 	width: 100%;
@@ -52,11 +68,17 @@
 	position: relative;
 }
 
+.challenger
+{
+	width: 100%;
+	float: left;
+}
+
 .messages .sender textarea
 {
 	width: 80%;
 	float: left;
-	height: 10%;
+	height: 5vh;
 	border-radius: 5px;
 	resize: none;
 	padding: 1%;
@@ -87,27 +109,47 @@
 	cursor: pointer;
 }
 
+#challenge
+{
+	float: left;
+	height: 5vh;
+	border-radius: 10px;
+	background-color: #090;
+	font-family: "Calibri";
+	font-weight: bold;
+	width: 100%;
+	font-size: 1.4vw;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	transition: 0.3s;
+	margin: 1.6% 0px;
+}
+
+#challenge:hover
+{
+	background-color: green;
+	cursor: pointer;
+}
+
 .discussion
 {
-	width:99%;
-	height:50vh;
-	margin-bottom:2px;
+	width: 99%;
+	height: 50vh;
+	margin-bottom: 2px;
 	float: left;
 	border-radius: 0.5vw;
 	border: 2px solid black;
 	margin-left: 1px;
 	margin-right: 1px;
-	background-color: white;
+	background-color: rgba(256, 256, 256, 0.8);
 	z-index: 1000;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 .discussion .name
 {
-	text-decoration: underline;
 	color: blue;
 	font-weight: bold;
-	padding: 1%;
 	font-size: 1.4vw;
 	font-family: "Calibri";
 }
@@ -122,48 +164,28 @@
 	color: #000;
 	font-weight: bold;
 	padding-left: 2%;
+	margin: 1%;
+	margin-top: 1.2%;
 	font-size: 1.2vw;
 	font-family: "Calibri";
 }
 
-/*need to change things below*/
-
-.messageLine
+.discussion .mess
 {
-	float: left;
-	width: 100%;
+	margin-left: 1%;
 }
 
-.sender
+.list
 {
-	color: #AA0000;
-}
-
-.rooms
-{   
-	border-radius: 6px;
-	background-color: rgba(51, 204, 500,0.9);
-	display: table-cell;
-	width: 40%;	
-	box-sizing: border-box;
-	box-shadow:3px 3px #999;
-}
-
-.rooms label 
-{
-	font-size: 50px;
-	font-family: "Calibri";
-	font-weight: bold;
-	margin-left:38%;
-}
-
-.border
-{ 
-    width:99%;
-	height:80vh;
-	margin-bottom:2px;
-	margin-left: 1px;
+	width: 99%;
+	height: 50vh;
+	margin-bottom: 2px;
 	float: left;
 	border-radius: 0.5vw;
 	border: 2px solid black;
+	margin-left: 1px;
+	margin-right: 1px;
+	background-color: rgba(256, 256, 256, 0.8);
+	z-index: 1000;
+	overflow-y: scroll;
 }

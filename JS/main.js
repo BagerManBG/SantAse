@@ -148,7 +148,8 @@ $(document).ready(function(){
 });
 
 $(document).keyup(function(e) {
-     if (e.keyCode == 27) { // escape key maps to keycode `27`
+     if (e.keyCode == 27) 
+     {
         $('.cover').fadeOut(200);
 		$('.register').fadeOut(400);
 		$('.login').fadeOut(400);

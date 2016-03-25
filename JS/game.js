@@ -1,5 +1,3 @@
-var flag = true;
-
 $(document).ready(function(){
 
 	$.ajax({
@@ -18,24 +16,36 @@ $(document).ready(function(){
 		var message = $('.messages .sender textarea').val()
 		$('.messages .sender textarea').attr("value", ""); 
 
+
 		$.ajax({
 			url: "../Controllers/chat/sendMessage.php",
 			type: "POST",
-			data: {message: message},
-			success: function(result){
-
-				checkMessages();
-			}
+			data: {message: message}
 		});
+		checkMessages(true);
 	});
 
+	checkMessages(true);
 	setInterval(function(){
 
-		checkMessages();
+		checkMessages(false);
 	}, 200);
 });
 
-function checkMessages()
+$(document).keydown(function(e) {
+
+    if (e.keyCode == 13) 
+    {
+       $('#send').click();
+    }
+
+    if (e.keyCode == 13 && !e.shiftKey)
+	{
+	    e.preventDefault();
+	}
+});
+
+function checkMessages(flag)
 {
 	$.ajax({
 		url: "../Controllers/chat/getMessages.php",

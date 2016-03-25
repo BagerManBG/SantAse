@@ -12,6 +12,11 @@
 	$user_id = $ch->getSender();
 	$message = $ch->getMessage();
 
+	if($message == '')
+	{
+		exit;
+	}
+
 	$q = "INSERT INTO `chat` (`id`, `user_id`, `message`) VALUES ('','".$user_id."','".$message."')";
 	$db->fetchArray($q);
 ?>

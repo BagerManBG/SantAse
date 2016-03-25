@@ -15,13 +15,11 @@
 
 	foreach ($result as $key => $val) 
 	{
-		echo "<p class='name disable-select";
+		echo "<p class='message'><span class='name disable-select";
 		if($user_id == $val['user_id'])
 		{
 			echo " my";
 		}
-		echo "'>".$val['username'].": </p>";
-
-		echo "<p class='message'>".$val['message']."</p>";
+		echo "'>".$val['username'].": </span><span class='mess'>".$val['message']."</span></p>";
 	}
 ?>
