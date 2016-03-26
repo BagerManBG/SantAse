@@ -5,6 +5,6 @@
 
 	$id = $_SESSION['user_id'];
 
-	$q = "UPDATE `users` SET `inRoom`='1' WHERE `id`='".$id."'";
+	$q = "UPDATE `users` SET `lastOnline`='".strtotime('now')."' WHERE `id`='".$id."'";
 	$db->fetchArray($q);
 ?>

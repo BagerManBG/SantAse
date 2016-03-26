@@ -11,15 +11,6 @@ $(document).ready(function(){
 		}
 	});
 
-	$.ajax({
-		url: "../Controllers/room/addPlayingUser.php",
-		success: function(result) {
-
-			//do something
-			getUsers();
-		}
-	});
-
 	$('#send').click(function(){
 
 		var message = $('.messages .sender textarea').val()
@@ -35,11 +26,15 @@ $(document).ready(function(){
 	});
 
 	checkMessages(true);
+	updateTime();
+	getUsers(true);
 	setInterval(function(){
 
 		checkMessages(false);
-		getUsers();
+		updateTime();
+		getUsers(false);
 	}, 200);
+
 });
 
 $(document).keydown(function(e) {
@@ -71,13 +66,35 @@ function checkMessages(flag)
 	});
 }
 
-function getUsers()
+function getUsers(flag)
 {
 	$.ajax({
 		url: "../Controllers/room/getPlayingUsers.php",
 		success: function(result){
-			$('.list').empty();
-			$('.list').append(result);
+			if(result == 'first' && flag)
+			{
+				$.ajax({
+					url: "../Controllers/chat/resetChat.php"
+				});
+			}
+
+			else if(result != 'first')
+			{
+				$('.list').empty();
+				$('.list').append(result);
+			}
+
+			else
+			{
+				$('.list').empty();
+			}
 		}
+	});
+}
+
+function updateTime()
+{
+	$.ajax({
+		url: "../Controllers/room/updateTime.php"
 	});
 }

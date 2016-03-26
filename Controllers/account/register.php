@@ -31,7 +31,7 @@
 		unset($info['password_confirm']);
 		$info['password'] = md5($info['password']);
 
-		$info['inRoom'] = 0;
+		$info['lastOnline'] = 0;
 		$info['wins'] = 0;
 		$info['loses'] = 0;
 
