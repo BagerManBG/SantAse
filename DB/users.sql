@@ -32,7 +32,7 @@ CREATE TABLE `users` (
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `inRoom` int(11) NOT NULL,
+  `lastOnline` int(11) NOT NULL,
   `wins` int(11) NOT NULL,
   `loses` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -41,8 +41,10 @@ CREATE TABLE `users` (
 -- Схема на данните от таблица `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `inRoom`, `wins`, `loses`) VALUES
-(16, 'BagerManBG', 'bager@man.bg', '8febe631fd4fef5700c2568d9184f5cb', 0, 0, 0);
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `lastOnline`, `wins`, `loses`) VALUES
+(16, 'BagerManBG', 'bager@man.bg', '8febe631fd4fef5700c2568d9184f5cb', 1459024647, 0, 0),
+(17, 'toshko', 'toshko_1998@abv.bg', '81dc9bdb52d04dc20036dbd8313ed055', 1459024616, 0, 0),
+(18, 'musaka', 'musaka@musa.ka', '81dc9bdb52d04dc20036dbd8313ed055', 1459024609, 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -62,7 +64,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
