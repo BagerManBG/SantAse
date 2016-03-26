@@ -135,14 +135,10 @@
 {
 	width: 99%;
 	height: 50vh;
-	margin-bottom: 2px;
 	float: left;
 	border-radius: 0.5vw;
 	border: 2px solid black;
-	margin-left: 1px;
-	margin-right: 1px;
 	background-color: rgba(256, 256, 256, 0.8);
-	z-index: 1000;
 	overflow-y: scroll;
 }
 
@@ -181,13 +177,40 @@
 {
 	width: 99%;
 	height: 50vh;
-	margin-bottom: 2px;
 	float: left;
 	border-radius: 0.5vw;
 	border: 2px solid black;
-	margin-left: 1px;
-	margin-right: 1px;
 	background-color: rgba(256, 256, 256, 0.8);
 	z-index: 1000;
-	overflow: scroll;
+	overflow-y: scroll;
 }
+
+.online
+{
+	color: blue;
+	font-weight: bold;
+	padding-left: 2%;
+	margin: 1%;
+	margin-top: 1.2%;
+	font-size: 1.6vw;
+	font-family: "Calibri";
+	width: 95%;
+	word-wrap: break-word;
+}
+
+.data
+{
+	color: red;
+}
+
+.user
+{
+	width: 100%;
+	
+}
+
+/*.user:hover
+{
+	background-color: rgba(0, 0, 256, 0.35); 
+	transition: 0.3s;
+}*/

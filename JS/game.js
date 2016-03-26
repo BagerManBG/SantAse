@@ -11,6 +11,15 @@ $(document).ready(function(){
 		}
 	});
 
+	$.ajax({
+		url: "../Controllers/room/addPlayingUser.php",
+		success: function(result) {
+
+			//do something
+			getUsers();
+		}
+	});
+
 	$('#send').click(function(){
 
 		var message = $('.messages .sender textarea').val()
@@ -29,6 +38,7 @@ $(document).ready(function(){
 	setInterval(function(){
 
 		checkMessages(false);
+		getUsers();
 	}, 200);
 });
 
@@ -57,6 +67,17 @@ function checkMessages(flag)
 				$('.discussion').scrollTop(10000);
 				flag = false;
 			}	
+		}
+	});
+}
+
+function getUsers()
+{
+	$.ajax({
+		url: "../Controllers/room/getPlayingUsers.php",
+		success: function(result){
+			$('.list').empty();
+			$('.list').append(result);
 		}
 	});
 }
