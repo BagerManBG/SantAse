@@ -6,7 +6,7 @@
 
 	$user_id = $_SESSION['user_id'];
 
-	$q = "SELECT * FROM `chat` INNER JOIN `users` ON `chat`.`user_id` = `users`.`id`";
+	$q = "SELECT * FROM `chat` INNER JOIN `users` ON `chat`.`user_id` = `users`.`id`  ORDER BY `chat`.`id` ";
 	
 	$result = $db->fetchArray($q);
 

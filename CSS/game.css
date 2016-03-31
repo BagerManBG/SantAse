@@ -24,7 +24,7 @@
 .chat
 {
 	border-radius: 5px;
-	background-color: rgba(51, 204, 51, 0.5);
+    background-color: rgba(51, 204, 51, 0.5);
 	width: 49%;
 	float: left;
 }
@@ -78,7 +78,7 @@
 {
 	width: 80%;
 	float: left;
-	height: 5vh;
+	height:7vh;
 	border-radius: 5px;
 	resize: none;
 	padding: 1%;
@@ -134,7 +134,7 @@
 .discussion
 {
 	width: 99%;
-	height: 50vh;
+	height: 70vh;
 	float: left;
 	border-radius: 0.5vw;
 	border: 2px solid black;
