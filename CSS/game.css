@@ -78,7 +78,7 @@
 {
 	width: 80%;
 	float: left;
-	height:7vh;
+	height: 5vh;
 	border-radius: 5px;
 	resize: none;
 	padding: 1%;
@@ -134,7 +134,7 @@
 .discussion
 {
 	width: 99%;
-	height: 70vh;
+	height: 50vh;
 	float: left;
 	border-radius: 0.5vw;
 	border: 2px solid black;
@@ -206,11 +206,5 @@
 .user
 {
 	width: 100%;
-	
+	cursor: pointer;
 }
-
-/*.user:hover
-{
-	background-color: rgba(0, 0, 256, 0.35); 
-	transition: 0.3s;
-}*/

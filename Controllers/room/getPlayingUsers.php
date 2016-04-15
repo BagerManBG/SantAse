@@ -17,7 +17,7 @@
 	{
 		if($val['id'] != $_SESSION['user_id'])
 		{
-			echo "<div class='user'>";
+			echo "<div class='user' id='".$val['id']."' name=".$val['username'].">";
 			echo "<p class='online'>".$val['username']."</p>";
 			echo "<p class='online data'>Wins: ".$val['wins']." Loses: ".$val['loses']."</p>";
 			echo "</div>";

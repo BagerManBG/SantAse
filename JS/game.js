@@ -1,3 +1,7 @@
+var rivalError = true;
+var id = null;
+var username = null;
+
 $(document).ready(function(){
 
 	$.ajax({
@@ -10,6 +14,8 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	$('form').remove();
 
 	$('#send').click(function(){
 
@@ -25,6 +31,30 @@ $(document).ready(function(){
 		checkMessages(true);
 	});
 
+	$('#challenge').click(function(){
+
+		if(id == null)
+		{
+			alert('No player is selected!');
+		}
+		else
+		{
+			$.ajax({
+
+				url: '../Controllers/room/challengePlayer.php',
+				type: "POST",
+				data: {rival_id: id},
+				success: function(result) {
+
+					alert('Request successfully sent! Wait for a response.');
+					checkAnswer();
+				}
+			});
+		}
+	});
+
+	
+
 	checkMessages(true);
 	updateTime();
 	getUsers(true);
@@ -33,8 +63,9 @@ $(document).ready(function(){
 		checkMessages(false);
 		updateTime();
 		getUsers(false);
-	}, 200);
+	}, 1000);
 
+	getRequest();
 });
 
 $(document).keydown(function(e) {
@@ -48,6 +79,12 @@ $(document).keydown(function(e) {
 	{
 	    e.preventDefault();
 	}
+
+	if (e.keyCode == 27) 
+     {
+        $('.cover').fadeOut(200);
+		$('.challenge').fadeOut(400);
+    }
 });
 
 function checkMessages(flag)
@@ -82,6 +119,21 @@ function getUsers(flag)
 			{
 				$('.list').empty();
 				$('.list').append(result);
+
+				if($('#'+id).length == 0)
+				{
+					$('#challenge').text('Challenge Player');
+					id = null;
+					username = null;
+				}
+
+				$('.user').click(function(event){
+
+					id = $(this).attr('id');
+					username = $(this).attr('name');
+
+					$('#challenge').text('Challenge '+ username);
+				});
 			}
 
 			else
@@ -97,4 +149,63 @@ function updateTime()
 	$.ajax({
 		url: "../Controllers/room/updateTime.php"
 	});
+}
+
+function checkAnswer()
+{
+	var interval = setInterval(function(){
+
+		//alert(1);
+		$.ajax({
+
+			url: "../Controllers/room/checkRivalAnswer.php",
+			success: function(result) {
+
+				if(result == 'yes')
+				{
+					clearInterval(interval);
+					alert('The player accepted your invitation!');
+					window.location.href = "realGame.php";
+				}
+
+				if(result == 'no')
+				{
+					clearInterval(interval);
+					alert('The player denied your invitation!');
+				}
+			}
+		});
+
+	}, 2000);
+}
+
+function getRequest()
+{
+	var interval = setInterval(function(){
+
+		//alert(1);
+		$.ajax({
+
+			url: "../Controllers/room/receiveDuelRequest.php",
+			success: function(result) {
+
+				if(result != '' && result.length < 21)
+				{
+					clearInterval(interval);
+					var answer = confirm('You have been challenged by ' + result + '. Do you accept?');
+					$.ajax({
+
+						url: "../Controllers/room/updateAnswer.php",
+						type: "POST",
+						data: {answer: answer},
+						success: function(result) {
+
+							window.location.href = "realGame.php";
+						}
+					});
+				}
+			}
+		});
+
+	}, 2000);
 }
