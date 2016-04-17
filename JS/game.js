@@ -164,7 +164,7 @@ function checkAnswer()
 				if(result == 'yes')
 				{
 					clearInterval(interval);
-					alert('The player accepted your invitation!');
+					//alert('The player accepted your invitation!');
 					window.location.href = "realGame.php";
 				}
 
@@ -193,6 +193,7 @@ function getRequest()
 				{
 					clearInterval(interval);
 					var answer = confirm('You have been challenged by ' + result + '. Do you accept?');
+
 					$.ajax({
 
 						url: "../Controllers/room/updateAnswer.php",
@@ -200,7 +201,10 @@ function getRequest()
 						data: {answer: answer},
 						success: function(result) {
 
-							window.location.href = "realGame.php";
+							if(answer)
+							{
+								window.location.href = "realGame.php";
+							}	
 						}
 					});
 				}
