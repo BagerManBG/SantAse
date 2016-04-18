@@ -171,7 +171,15 @@ function checkAnswer()
 				if(result == 'no')
 				{
 					clearInterval(interval);
-					alert('The player denied your invitation!');
+
+					$.ajax({
+
+						url: "../Controllers/room/deleteRequest.php",
+						success: function(result) {
+
+							alert('The player denied your invitation!');
+						}
+					});
 				}
 			}
 		});

@@ -5,6 +5,15 @@
 	
 	$id = $_SESSION['user_id'];
 
+	$q = "SELECT * FROM `turns` WHERE `player_1` = '".$id."' ";
+
+	$result = $db->fetchArray($q);
+
+	if(count($result) != 0)
+	{
+		exit;
+	}
+
 	$q = "SELECT * FROM `challenge` WHERE `challenger_id` = '".$id."'";
 
 	$result = $db->fetchArray($q);

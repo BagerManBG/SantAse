@@ -6,6 +6,17 @@
 
 	$id = $_SESSION['user_id'];
 
+	$q = "SELECT * FROM `hand` WHERE `player`='".$id."'";
+
+	$result = $db->fetchArray($q);
+
+	if(count($result) != 0)
+	{
+		$handString = $result[0]['hand'];
+		echo $handString;
+		exit;
+	}
+
 	$q = "SELECT * FROM `packs` WHERE `player_1`='".$id."' OR `player_2`='".$id."'";
 
 	$result = $db->fetchArray($q);

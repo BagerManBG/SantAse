@@ -113,6 +113,8 @@ function drawHand()
 			url: "../Controllers/game/drawHand.php",
 			success: function(result) {
 
+				//alert(result);
+
 				var hand = result.split(',');
 
 				for(var j = 0; j < 6; j++)
