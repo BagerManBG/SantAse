@@ -23,7 +23,7 @@ body
 	height: 100%;
 }
 
-.container h2.playerName
+.container h2.playerName, .container h2.playerScore
 {
 	position: absolute;
 	font-weight: bold;
@@ -36,12 +36,22 @@ body
 
 .container h2#player_1
 {
-	bottom: 4%;
+	bottom: 8%;
 }
 
 .container h2#player_2
 {
-	top: 4%;
+	top: 8%;
+}
+
+.container h2#player_1_sc
+{
+	bottom: 3%;
+}
+
+.container h2#player_2_sc
+{
+	top: 3%;
 }
 
 .container h2#myTurn
@@ -53,7 +63,7 @@ body
 	color: #f00;
 	text-shadow: 1px 1px 1px #fff;
 	left: 3%;
-	bottom: 10%;
+	bottom: 14%;
 }
 
 .container img#pile

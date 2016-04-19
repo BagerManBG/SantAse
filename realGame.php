@@ -23,6 +23,9 @@
 			<h2 class="playerName" id="player_1">Player 1</h2>
 			<h2 class="playerName" id="player_2">Player 2</h2>
 
+			<h2 class="playerScore" id="player_1_sc">0</h2>
+			<h2 class="playerScore" id="player_2_sc">0</h2>
+
 			<h2 class="playerName" id="myTurn">Your Turn!</h2>
 
 			<img src="images/cards/pile/pile.png" id="pile">
