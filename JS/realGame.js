@@ -14,7 +14,7 @@ $(document).ready(function(){
 		getTurn();
 		drawHand();
 
-	}, 200);
+	}, 1000);
 
 	turnSet();
 });

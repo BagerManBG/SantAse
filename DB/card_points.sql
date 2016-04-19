@@ -30,38 +30,40 @@ DROP TABLE IF EXISTS `card_points`;
 CREATE TABLE `card_points` (
   `id` int(11) NOT NULL,
   `card` varchar(255) NOT NULL,
-  `points` int(11) NOT NULL
+  `points` int(11) NOT NULL,
+  `power` int(11) NOT NULL,
+  `paint` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Схема на данните от таблица `card_points`
 --
 
-INSERT INTO `card_points` (`id`, `card`, `points`) VALUES
-(10, '1_c', 11),
-(11, '9_c', 0),
-(12, '10_c', 10),
-(13, '11_c', 2),
-(14, '12_c', 3),
-(15, '13_c', 4),
-(16, '1_d', 11),
-(17, '9_d', 0),
-(18, '10_d', 10),
-(19, '11_d', 2),
-(20, '12_d', 3),
-(21, '13_d', 4),
-(22, '1_h', 11),
-(23, '9_h', 0),
-(24, '10_h', 10),
-(25, '11_h', 2),
-(26, '12_h', 3),
-(27, '13_h', 4),
-(28, '1_s', 11),
-(29, '9_s', 0),
-(30, '10_s', 10),
-(31, '11_s', 2),
-(32, '12_s', 3),
-(33, '13_s', 4);
+INSERT INTO `card_points` (`id`, `card`, `points`, `power`, `paint`) VALUES
+(10, '1_c', 11, 6, 'clubs'),
+(11, '9_c', 0, 1, 'clubs'),
+(12, '10_c', 10, 2, 'clubs'),
+(13, '11_c', 2, 3, 'clubs'),
+(14, '12_c', 3, 4, 'clubs'),
+(15, '13_c', 4, 5, 'clubs'),
+(16, '1_d', 11, 6, 'diamonds'),
+(17, '9_d', 0, 1, 'diamonds'),
+(18, '10_d', 10, 2, 'diamonds'),
+(19, '11_d', 2, 3, 'diamonds'),
+(20, '12_d', 3, 4, 'diamonds'),
+(21, '13_d', 4, 5, 'diamonds'),
+(22, '1_h', 11, 6, 'hearts'),
+(23, '9_h', 0, 1, 'hearts'),
+(24, '10_h', 10, 2, 'hearts'),
+(25, '11_h', 2, 3, 'hearts'),
+(26, '12_h', 3, 4, 'hearts'),
+(27, '13_h', 4, 5, 'hearts'),
+(28, '1_s', 11, 6, 'spades'),
+(29, '9_s', 0, 1, 'spades'),
+(30, '10_s', 10, 2, 'spades'),
+(31, '11_s', 2, 3, 'spades'),
+(32, '12_s', 3, 4, 'spades'),
+(33, '13_s', 4, 5, 'spades');
 
 --
 -- Indexes for dumped tables

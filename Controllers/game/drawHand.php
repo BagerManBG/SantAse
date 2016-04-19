@@ -45,5 +45,11 @@
 
 	$db->saveArray('hand', $info); //remove comment later !!!
 
+	$info = array(
+		"player" => $id,
+		"points" => 0);
+
+	$db->saveArray('points', $info);
+
 	echo $handString;
 ?>

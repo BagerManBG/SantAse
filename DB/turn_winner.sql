@@ -23,15 +23,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `turns`
+-- Структура на таблица `turn_winner`
 --
 
-DROP TABLE IF EXISTS `turns`;
-CREATE TABLE `turns` (
+DROP TABLE IF EXISTS `turn_winner`;
+CREATE TABLE `turn_winner` (
   `id` int(11) NOT NULL,
   `player_1` int(11) NOT NULL,
   `player_2` int(11) NOT NULL,
-  `turn` int(11) NOT NULL
+  `winner` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -39,9 +39,9 @@ CREATE TABLE `turns` (
 --
 
 --
--- Indexes for table `turns`
+-- Indexes for table `turn_winner`
 --
-ALTER TABLE `turns`
+ALTER TABLE `turn_winner`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -49,10 +49,10 @@ ALTER TABLE `turns`
 --
 
 --
--- AUTO_INCREMENT for table `turns`
+-- AUTO_INCREMENT for table `turn_winner`
 --
-ALTER TABLE `turns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `turn_winner`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

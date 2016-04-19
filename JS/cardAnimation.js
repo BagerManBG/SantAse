@@ -1,8 +1,12 @@
 var myTurn = false;
+var myCardVis = false;
+var rivalCardVis = false;
 
 $(document).ready(function(){
 
 	createCardData();
+
+	var interval = setInterval(getRivalCard, 2000);
 
 	$('.playedCard').hide();
 
@@ -11,7 +15,7 @@ $(document).ready(function(){
 		getTurn();
 		if(myTurn)
 		{
-
+			
 			var src = $(this).attr('src');
 			
 			$(this).fadeOut(200);
@@ -23,8 +27,19 @@ $(document).ready(function(){
 				$(this).attr('src', 'images/cards/back/back.png');
 			}, 200);
 
+			myCardVis = true;
+
 			changeTurn();
 			writeCardData($(this).index());
+
+			if(myCardVis && rivalCardVis)
+			{
+				calculateResult();
+				//reset data
+				//draw card
+				//deside whose turn it is
+				//display points
+			}
 		}
 	});
 });
@@ -61,8 +76,10 @@ function changeTurn()
 	});
 }
 
-function writeCardData(index) //I'm leaving this for tonight
+function writeCardData(index)
 {
+	//alert(index);
+	
 	$.ajax({
 
 		url: "../Controllers/game/writeCardData.php",
@@ -81,6 +98,43 @@ function createCardData()
 		url: "../Controllers/game/createCardData.php",
 		success: function(result) {
 			//alert(result);
+		}
+	});
+}
+
+function getRivalCard()
+{
+	$.ajax({
+
+		url: "../Controllers/game/getRivalCard.php",
+		success: function(result) {
+
+			//alert(result);
+			//clearInterval(interval);
+
+			if(result != 'null')
+			{
+				var i = result.indexOf('_');
+				var partOne = result.slice(0, i).trim();
+				var partTwo = result.slice(i + 1, result.length).trim();
+
+				$('#player_2_playedCard').attr('src', 'images/cards/'+partTwo+'/'+result+'.png');
+				$('#player_2_playedCard').fadeIn(200);
+
+				rivalCardVis = true;
+			}
+		}
+	});
+}
+
+function calculateResult() //tommorow
+{
+	$.ajax({
+
+		url: "../Controllers/game/calculateResult.php",
+		success: function(result) {
+
+			alert(result);
 		}
 	});
 }

@@ -45,4 +45,11 @@
 		"pack_order" => $packString);
 
 	$db->saveArray('packs', $info);
+
+	$info = array(
+		"player_1" => $player_1,
+		"player_2" => $player_2,
+		"winner" => 'null');
+
+	$db->saveArray('turn_winner', $info);
 ?>
