@@ -2,6 +2,7 @@
 
 	error_reporting(0);
 	require_once("../../Models/database/db.class.php");
+	require_once("handCardsSort.php");
 
 	$id = $_SESSION['user_id'];
 
@@ -34,6 +35,8 @@
 	}
 
 	$hand = implode(',', $hand_arr);
+
+	$hand = SortHand($hand);
 
 	$q = "UPDATE `hand` SET `hand`='".$hand."' WHERE `player` = '".$id."'";
 

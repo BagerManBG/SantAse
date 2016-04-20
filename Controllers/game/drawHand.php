@@ -3,6 +3,7 @@
 	//exit; //Definitely remove later !!!!
 	error_reporting(E_ERROR | E_PARSE);
 	require_once("../../Models/database/db.class.php");
+	require_once("handCardsSort.php");
 
 	$id = $_SESSION['user_id'];
 
@@ -38,6 +39,8 @@
 	$db->fetchArray($q); //remove comment later !!!
 
 	$handString = implode(',', $hand);
+
+	$handString = SortHand($handString);
 
 	$info = array(
 		"player" => $id,
