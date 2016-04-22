@@ -8,6 +8,7 @@
 	$q4 = "DELETE FROM `hand` WHERE 1";
 	$q5 = "DELETE FROM `turn_winner` WHERE 1";
 	$q6 = "DELETE FROM `cards_this_turn` WHERE 1";
+	$q7 = "DELETE FROM `trump` WHERE 1";
 
 	$db->fetchArray($q1);
 	$db->fetchArray($q2);
@@ -15,4 +16,5 @@
 	$db->fetchArray($q4);
 	$db->fetchArray($q5);
 	$db->fetchArray($q6);
+	$db->fetchArray($q7);
 ?>

@@ -13,6 +13,10 @@
 
 	$result_tr = $db->fetchArray($q);
 
+	$q = "SELECT * FROM `trump` WHERE `player_1`='".$id."' OR `player_2`='".$id."'";
+
+	$result_trump = $db->fetchArray($q);
+
 	$card_1 = $result[0]['player_1_card'];
 	$card_2 = $result[0]['player_2_card'];
 
@@ -29,9 +33,7 @@
 		$rival_id = $result[0]['player_1'];
 	}
 
-	$trump_card_str = $result_tr[0]['pack_order'];
-	$trump_card_arr = explode(',', $trump_card_str);
-	$trump_card = $trump_card_arr[0];
+	$trump_card = $result_trump[0]['trump'];
 
 	$q1 = "SELECT * FROM `card_points` WHERE `card` = '".$card_1."'";
 	$q2 = "SELECT * FROM `card_points` WHERE `card` = '".$card_2."'";

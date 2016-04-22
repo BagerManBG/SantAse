@@ -52,4 +52,11 @@
 		"winner" => 'null');
 
 	$db->saveArray('turn_winner', $info);
+
+	$info = array(
+		"player_1" => $player_1,
+		"player_2" => $player_2,
+		"trump" => $packArray[0]);
+
+	$db->saveArray('trump', $info);
 ?>

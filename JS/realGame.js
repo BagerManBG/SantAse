@@ -1,5 +1,6 @@
 var myTurn = false;
 var firstTurn = true;
+var interval;
 
 $(document).ready(function(){
 
@@ -8,13 +9,15 @@ $(document).ready(function(){
 	getPayerNames();
 	shufflePack();
 
-	setInterval(function() {
+	interval = setInterval(function() {
 
-		getTrumpCard();
-		getTurn();
 		drawHand();
+		getPackCardsRemaining();
 
 	}, 1000);
+
+	setInterval(getTurn, 1000);
+	setInterval(getTrumpCard, 1000);
 
 	turnSet();
 });
@@ -113,8 +116,6 @@ function drawHand()
 			url: "../Controllers/game/drawHand.php",
 			success: function(result) {
 
-				//alert(result);
-
 				var hand = result.split(',');
 
 				for(var j = 0; j < 6; j++)
@@ -138,6 +139,28 @@ function changeTurn()
 		success: function(result) {
 
 			$('#myTurn').hide();
+		}
+	});
+}
+
+function getPackCardsRemaining()
+{
+	$.ajax({
+
+		url: '../Controllers/game/getPackCardsRemaining.php',
+		success: function(result) {
+
+			if(result < 5)
+			{
+				$('#pile').attr('src', 'images/cards/pile/pile_' + result + '.png');
+				
+				if(result == 0)
+				{
+					clearInterval(interval);
+					$('#pile').hide();
+					$('#trump').hide();
+				}
+			}
 		}
 	});
 }
