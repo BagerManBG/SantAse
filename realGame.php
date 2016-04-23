@@ -20,7 +20,7 @@
 		
 		<div class="container">
 			<img src="images/game/table.jpg" id="bg">
-
+			
 			<h2 class="playerName" id="player_1">Player 1</h2>
 			<h2 class="playerName" id="player_2">Player 2</h2>
 
@@ -53,6 +53,11 @@
 
 			<img src="images/cards/back/back.png" class="playedCard" id="player_1_playedCard">
 			<img src="images/cards/back/back.png" class="playedCard" id="player_2_playedCard">
+
+			<div id="endGame">
+				<p>End of Game</p>
+				<p>The Winner is <span></span>!</p>
+			</div>
 		</div>
 
 	</body>

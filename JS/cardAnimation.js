@@ -11,6 +11,7 @@ var removeCard = true;
 var requirementsMet = false;
 var obj;
 var flag = true;
+var flag_2 = true;
 
 $(document).ready(function(){
 
@@ -22,6 +23,7 @@ $(document).ready(function(){
 	interval_4 = setInterval(getPackCardsRemaining_1, 1000);
 
 	$('.playedCard').hide();
+	$('#endGame').hide();
 
 	$('.container #player_1_hand img').click(function(){
 
@@ -34,9 +36,10 @@ $(document).ready(function(){
 
 		if(myTurn)
 		{
+			//alert('K/Q');
 			checkForKingQueen($(this).index());
 		}
-
+		
 		if(noCardsInPack && player_2_visible && myTurn)//finish later
 		{
 			var index = $(obj).index();//finish later
@@ -108,7 +111,6 @@ $(document).ready(function(){
 				winner = 'null';
 				setTimeout(calculateResult, 1000);
 				//reset data
-				//draw card
 			}
 
 			mustDraw = true;
@@ -242,6 +244,19 @@ function getPoints()
 
 				$('#player_1_sc').text(partOne);
 				$('#player_2_sc').text(partTwo);
+
+				if(partOne >= 66)
+				{
+					//alert('winner is pl1'); //finish tommorow
+					var winner = $('#player_1').text();
+					stopGame(winner, 'win');
+				}
+				else if(partTwo >= 66)
+				{
+					//alert('winner is pl2'); //finish tommorow
+					var winner = $('#player_2').text();
+					stopGame(winner, 'lose');
+				}
 			}
 		});
 	//}
@@ -270,7 +285,9 @@ function hideCards()
 
 			resetData();
 			setTimeout(drawCard, 1000);
-		}, 3000);
+
+			lastCardWinnerDecide();
+		}, 2000);
 	}
 }
 
@@ -369,7 +386,91 @@ function checkForKingQueen(index)
 		type: "POST",
 		data: {index: index},
 		success: function(result) {
-			//alert(result);
+			//alert(result); //delete
+		}
+	});
+}
+
+function stopGame(winner, status)
+{
+	if(flag_2)
+	{
+		clearInterval(interval);
+		clearInterval(interval_2);
+		clearInterval(interval_3);
+		clearInterval(interval_4);
+
+		$('.playerName').fadeOut(400);
+		$('.playerScore').fadeOut(400);
+		$('#pile').fadeOut(400);
+		$('#trump').fadeOut(400);
+		$('#pile').fadeOut(400);
+		$('.hand').fadeOut(400);
+		$('.playedCard').fadeOut(400);
+
+		setTimeout(function(){
+
+			$('.playerName').remove();
+			$('.playerScore').remove();
+			$('#pile').remove();
+			$('#trump').remove();
+			$('#pile').remove();
+			$('.hand').remove();
+			$('.playedCard').remove();
+
+			//alert('The winner is ' + winner);
+			$('#endGame').addClass(status);
+			$('#endGame span').text(winner);
+			$('#endGame').fadeIn(400);
+
+			setTimeout(function(){
+
+				deleteData(status);
+			}, 3000);
+		}, 500);
+
+		flag_2 = false;
+	}
+}
+
+function lastCardWinnerDecide()
+{
+	$.ajax({
+
+		url: "../Controllers/game/lastCardWinnerDecide.php",
+		success: function(result) {
+
+			var numVisibleCards = $('#player_1_hand').children(':visible').length;
+			
+			if(numVisibleCards == 0)
+			{
+				if(result == 'winner')
+				{
+					//alert('winner is pl1'); //finish tommorow
+					var winner = $('#player_1').text();
+					stopGame(winner, 'win');
+				}
+				else if(result == 'no')
+				{
+					//alert('winner is pl2'); //finish tommorow
+					var winner = $('#player_2').text();
+					stopGame(winner, 'lose');
+				}
+			}
+		}
+	});
+}
+
+function deleteData(status)
+{
+	$.ajax({
+
+		url: "../Controllers/game/deleteData.php",
+		type: "POST",
+		data: {status: status},
+		success: function(result) {
+
+			window.location.pathname = 'game.php';
 		}
 	});
 }

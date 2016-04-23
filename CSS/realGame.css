@@ -140,3 +140,37 @@ body
 {
 	left: 50%;
 }
+
+#endGame
+{
+	position: absolute;
+	width: 40%;
+	left: 30%;
+	top: 30%;
+	border-radius: 20px;
+}
+
+#endGame p
+{
+	text-align: center;
+	margin: 10% 0px;
+	font-size: 3.2vw;
+	font-family: "Calibri";
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+}
+
+#endGame span
+{
+	font-weight: bold;
+}
+
+.win
+{
+	background-color: rgba(0,256,0,0.6);
+}
+
+.lose
+{
+	background-color: rgba(256,0,0,0.6);
+}

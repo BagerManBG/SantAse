@@ -17,6 +17,15 @@
 
 	$card_arr = explode('_', $card);
 
+	$q = "SELECT * FROM `cards_this_turn` WHERE `player_1`='".$id."' OR `player_2`='".$id."'";
+
+	$result = $db->fetchArray($q);
+
+	if( ($result[0]['player_1_card'] != 'null' && $result[0]['player_2'] == $id) || ($result[0]['player_2_card'] != 'null' && $result[0]['player_1'] == $id) )
+	{
+		exit;
+	}
+
 	if($card_arr[0] == '12' || $card_arr[0] == '13')
 	{
 		foreach ($hand_arr as $key => $val) 
