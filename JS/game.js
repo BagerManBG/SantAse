@@ -212,7 +212,11 @@ function getRequest()
 							if(answer)
 							{
 								window.location.href = "realGame.php";
-							}	
+							}
+							else
+							{
+								window.location.reload();
+							}
 						}
 					});
 				}
