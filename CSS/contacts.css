@@ -1,0 +1,132 @@
+.middleContent
+{
+	float: left;
+	width: 70%;
+	margin: 6% 15% 3%;
+	padding: 3% 2%;
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+
+#leftContainer
+{
+	background-color: rgba(256,0,0,0.5);
+	width: 89.9%;
+	float: left;
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+
+#leftContainer .image
+{
+	width: 30%;
+	float: left;
+	padding: 2%;
+}
+
+#leftContainer .image img
+{
+	width: 100%;
+	float: left;
+	border-radius: 20px;
+}
+
+#leftContainer .text
+{
+	padding: 2% 0px;
+}
+
+#leftContainer #left
+{
+	float: left;
+}
+
+#leftContainer .text p
+{
+	font-weight: bold;
+	font-family: "Calibri";
+	font-size: 2.4vw;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	margin-top: 10%;
+}
+
+#leftContainer .text p:first-of-type
+{
+	margin-top: 0px;
+}
+
+#leftContainer .text a
+{
+	color: #fff;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+#leftContainer .text a:hover
+{
+	color: rgb(0, 191, 255);
+	text-decoration: underline;
+}
+
+#rightContainer
+{
+	background-color: rgba(0,0,0,0.5);
+	width: 89.9%;
+	float: right;
+	border-radius: 20px;
+	box-sizing: border-box;
+	margin-top: 5%;
+}
+
+#rightContainer .image
+{
+	width: 30%;
+	float: right;
+	padding: 2%;
+}
+
+#rightContainer .image img
+{
+	width: 100%;
+	float: right;
+	border-radius: 20px;
+}
+
+#rightContainer .text
+{
+	padding: 2% 0px;
+}
+
+#rightContainer #right
+{
+	float: right;
+}
+
+#rightContainer .text p
+{
+	font-weight: bold;
+	font-family: "Calibri";
+	font-size: 2.4vw;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	margin-top: 10%;
+}
+
+#rightContainer .text p:first-of-type
+{
+	margin-top: 0px;
+}
+
+#rightContainer .text a
+{
+	color: #fff;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+#rightContainer .text a:hover
+{
+	color: rgb(0, 191, 255);
+	text-decoration: underline;
+}
