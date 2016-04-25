@@ -45,7 +45,7 @@
 			<div id="rightContainer">
 
 				<div class="image">
-					<img src="images/contacts/1.jpg">
+					<img src="images/contacts/2.jpg">
 				</div>
 
 				<div class="text" id="right">

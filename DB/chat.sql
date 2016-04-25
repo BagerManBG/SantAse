@@ -34,13 +34,6 @@ CREATE TABLE `chat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Схема на данните от таблица `chat`
---
-
-INSERT INTO `chat` (`id`, `user_id`, `message`) VALUES
-(121, 16, 'bager');
-
---
 -- Indexes for dumped tables
 --
 
@@ -58,7 +51,7 @@ ALTER TABLE `chat`
 -- AUTO_INCREMENT for table `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
