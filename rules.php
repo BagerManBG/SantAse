@@ -18,7 +18,7 @@
 				<div class="nav">
 					<a href="index.php" class="disable-select">Home</a>
 					<a href="#" class="activePage disable-select">Rules</a>
-					<a href="#" class="disable-select">Contact</a>
+					<a href="contacts.php" class="disable-select">Contact</a>
 				</div>
 
 				<button class="sign_UpIn" id="register">Sign Up</button>

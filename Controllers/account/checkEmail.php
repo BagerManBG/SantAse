@@ -5,19 +5,19 @@
 
 	if(strlen($email) == 0)
 	{
-		echo "You must fill in email !!!";
+		echo "You must fill in email";
 		exit;
 	}
 
 	if(!preg_match($regex, $email))
 	{
-		echo "This is not a valid email !!!";
+		echo "This is not a valid email";
 		exit;
 	}
 
 	if(!preg_match('/^[a-z0-9@._]+$/i', $email))
 	{
-		echo "Email cannot contain special chars !!!";
+		echo "Email cannot contain special chars";
 		exit;
 	}
 ?>

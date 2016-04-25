@@ -20,7 +20,7 @@
 				<div class="nav">
 					<a href="index.php" class="disable-select">Home</a>
 					<a href="rules.php" class="disable-select">Rules</a>
-					<a href="#" class="disable-select">Contact</a>
+					<a href="contacts.php" class="disable-select">Contact</a>
 				</div>
 			</div>
 		</nav>

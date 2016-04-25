@@ -128,7 +128,7 @@ $(document).ready(function(){
 						$('.login input[name=username]').addClass('error');
 						$('.login input[name=password]').addClass('error');
 
-						$('.login p').text('Wrong Username or Password !!!');
+						$('.login p').text('Wrong Username or Password');
 
 						$('.login input[name=username]').bind("input",function(){
 
