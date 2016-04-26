@@ -36,7 +36,14 @@
 		$info['loses'] = 0;
 
 		$db->saveArray('users', $info);
-	}
+
+		$q = "SELECT * FROM `users` WHERE `username`='".$user."'";
+
+		$result = $db->fetchArray($q);
+
+		$_SESSION['user_id'] = $result[0]['id'];
+		$_SESSION['user'] = $result[0]['username'];
+	}	
 	
 	header("Location: ../../index.php");
 ?>
